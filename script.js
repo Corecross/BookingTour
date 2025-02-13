@@ -145,7 +145,7 @@ var swiper = new Swiper(".brand-slider", {
 });
 
 
-const API_URL = "https://script.google.com/a/macros/fpt.edu.vn/s/AKfycbxh1i2YbfF2byaWDwS-2Efl7DsqyigsKPUXKyQrgf75uKU-pg0Lz6TiyP4yUZPkc3ftlg/exec";  // Thay bằng URL đã sao chép
+const API_URL = "https://script.google.com/macros/s/AKfycbxh1i2YbfF2byaWDwS-2Efl7DsqyigsKPUXKyQrgf75uKU-pg0Lz6TiyP4yUZPkc3ftlg/exec";  // Thay bằng URL đã sao chép
 
 fetch(API_URL)
     .then(response => response.json())
