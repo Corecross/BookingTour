@@ -97,7 +97,7 @@
 
     <!-- home section ends -->
 
-    <h1>Lượt truy cập: <span id="visitor-count">0</span></h1>
+    <p id="visitCount">Đang tải...</p>
 
     <!-- book section starts  -->
 
@@ -281,22 +281,24 @@
 
     <div class="book-form-container">
         <i class="fas fa-times" id="form-close-book"></i>
-    
+
         <form action="">
             <h2 class="form-title text-3xl font-bold mb-6 text-center text-green-500">Tour Details</h2>
-            
+
             <p><strong>Departure Date:</strong> 19/02/2025 17:45</p>
             <p><strong>Departure Location:</strong> Ho Chi Minh City</p>
             <p><strong>Package Type:</strong> Standard Resort Combo</p>
             <p><strong>Attractions:</strong></p>
             <p><strong>Transport:</strong> Airplane</p>
             <p><strong>Hotel:</strong> 3-Star Hotel</p>
-            <p class="price text-green-500 font-bold mt-4 text-lg p-2 rounded"><strong>Ticket Price:</strong> 3,390,000 VND</p>
-    
-            <input type="submit" value="Confirm Booking" class="btn mt-6 bg-green-500 text-white py-2 px-4 rounded w-full hover:bg-green-600 transition duration-300">
+            <p class="price text-green-500 font-bold mt-4 text-lg p-2 rounded"><strong>Ticket Price:</strong> 3,390,000
+                VND</p>
+
+            <input type="submit" value="Confirm Booking"
+                class="btn mt-6 bg-green-500 text-white py-2 px-4 rounded w-full hover:bg-green-600 transition duration-300">
         </form>
     </div>
-    
+
 
     <!-- book tiket ends -->
 
@@ -722,7 +724,60 @@
 
 
 
+    <!-- 🔥 Dùng Firebase 8 thay vì Firebase 9 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
+    <script>
+        // 🔧 Cấu hình Firebase (THÊM databaseURL)
+        const firebaseConfig = {
+            apiKey: "AIzaSyAN94hxYgoW8gmq4gg-5yMR5zGgnOIDEwE",
+            authDomain: "travel-6a250.firebaseapp.com",
+            databaseURL: "https://travel-6a250-default-rtdb.firebaseio.com", // ✅ Thêm URL này
+            projectId: "travel-6a250",
+            storageBucket: "travel-6a250.appspot.com", // ✅ Sửa lại storageBucket
+            messagingSenderId: "448328265032",
+            appId: "1:448328265032:web:709258a19823b7d3ded77d",
+            measurementId: "G-XGEMB8J7YF"
+        };
+
+        // 🔥 Khởi tạo Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // 📌 Hàm hiển thị số lượt truy cập
+        function displayVisits() {
+            const visitRef = database.ref('visits');
+            visitRef.once('value')
+                .then((snapshot) => {
+                    const visits = snapshot.val();
+                    document.getElementById("visitCount").innerHTML = "Tổng số lượt truy cập: " + (visits || 0);
+                })
+                .catch((error) => {
+                    console.error("Lỗi khi lấy dữ liệu:", error);
+                });
+        }
+
+        // 📌 Hàm tăng số lượt truy cập
+        function incrementVisits() {
+            const visitRef = database.ref('visits');
+            visitRef.transaction((currentVisits) => {
+                return (currentVisits || 0) + 1;
+            }, (error, committed, snapshot) => {
+                if (error) {
+                    console.error("Lỗi khi cập nhật lượt truy cập:", error);
+                } else if (committed) {
+                    console.log("Lượt truy cập đã được cập nhật:", snapshot.val());
+                    displayVisits(); // Cập nhật số lượt truy cập trên UI
+                }
+            });
+        }
+
+        // ⏳ Chờ Firebase tải xong rồi gọi hàm
+        setTimeout(() => {
+            incrementVisits();
+        }, 2000);
+    </script>
 
 
 
