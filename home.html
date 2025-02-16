@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour And Travel</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/slider.css">
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link rel="stylesheet" href="CSS/login.css" />
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header id="header">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#travel">trends</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+        </nav>
+
+        <div class="icons">
+            <!-- <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>  -->
+        </div>
+
+        <!-- User -->
+        <div class="user-section">
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <div class="login-btn">
+            <a href="UILogin.html">Đăng nhập</a>
+        </div>
+
+        <!-- <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- Information form container  -->
+
+    <div class="login-form-container" id="user-popup">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <div id="formContent">
+            <form>
+                <h3>Information</h3>
+
+                <label>Full Name:</label>
+                <input type="text" class="box" id="fullName" readonly>
+
+                <label>Email:</label>
+                <input type="email" class="box" id="username" readonly>
+
+                <div id="phoneContainer" style="display: none;">
+                    <label>Phone:</label>
+                    <input type="text" class="box" id="phone" readonly>
+                </div>
+
+                <p id="visitCount">Visitors: </p>
+
+                <button id="logout-btn">Đăng xuất</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home" style="padding: 0;">
+        <div id="slider">
+            <div class="banner-section">
+                <video playsinline autoplay muted loop>
+                    z
+                    <source src="images/introbanner.mp4" />
+                </video>
+                <div class="text-slider">
+                    <h2 class="heading-slider">Hãy cùng nhau đi khắp việt nam</h2>
+                    <h4>
+                        Muốn đi nhanh hãy đi một mình | muốn đi xa hãy đi cùng GoodTrip
+                    </h4>
+                    <a class="morebanner-btn" href="#4diemden">Trải nghiệm</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- book section starts  -->
+
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/book-img.svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <h3>where to</h3>
+                    <input type="text" placeholder="place name">
+                </div>
+                <div class="inputBox">
+                    <h3>how many</h3>
+                    <input type="number" placeholder="number of guests">
+                </div>
+                <div class="inputBox">
+                    <h3>arrivals</h3>
+                    <input type="date">
+                </div>
+                <div class="inputBox">
+                    <h3>leaving</h3>
+                    <input type="date">
+                </div>
+                <input type="submit" class="btn" value="book now">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- book section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/gqI1Fh6lS531NJlZtDCuoIru6HfThmI9RR7ZxdSDZVI.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> can tho </h3>
+                    <p>Known for its floating markets, and picturesque rural canals.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND <span>120.000 VND</span> </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/E7NIsjWkEaGyel6a2NET3vgYXT6acq2IW8xOuVs_KeE.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> tien giang </h3>
+                    <p>Famous for the Cai Be floating market and lush orchards.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND <span>120.000 VND</span> </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/WBj_uHVQ3__IEbEyB87AvQZpGFLgnwxl8l2rPcJPA40.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> an giang </h3>
+                    <p>Home to the Tra Su Cajuput Forest and Sam Mountain.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND <span>120.000 VND</span> </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/cw31kzrPNRq2-qiQiuqfXRFXY_QKCx6Rrkcl40pntjE.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> my tho </h3>
+                    <p>Known for the Vinh Trang Pagoda and boat tours on the Mekong River.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND<span>120.000 VND</span> </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/j1c9vexFOoDw_9pr0Zai6eA4sO8YKWv1W5kAp_wgLLw.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> long an </h3>
+                    <p>Famous for the Tan Lap floating village and lush landscapes.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND<span>120.000 VND</span> </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/Yd_hRABpac1KP-N_4ychA2fOcUL9i4MyKbyTDu0ucPg.jpg"
+                    alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> ca mau </h3>
+                    <p>Known for its mangrove forests and the southernmost point of Vietnam.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 90.000 VND<span>120.000 VND</span> </div>
+                    <a id="book-btn" class="btn">book now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- book tiket -->
+
+    <div class="book-form-container">
+        <i class="fas fa-times" id="form-close-book"></i>
+
+        <form action="">
+            <h2 class="form-title text-3xl font-bold mb-6 text-center text-green-500">Tour Details</h2>
+
+            <p><strong>Departure Date:</strong> 19/02/2025 17:45</p>
+            <p><strong>Departure Location:</strong> Ho Chi Minh City</p>
+            <p><strong>Package Type:</strong> Standard Resort Combo</p>
+            <p><strong>Attractions:</strong></p>
+            <p><strong>Transport:</strong> Airplane</p>
+            <p><strong>Hotel:</strong> 3-Star Hotel</p>
+            <p class="price text-green-500 font-bold mt-4 text-lg p-2 rounded"><strong>Ticket Price:</strong> 3,390,000
+                VND</p>
+
+            <input type="submit" value="Confirm Booking" id="book-now-btn"
+                class="btn mt-6 bg-green-500 text-white py-2 px-4 rounded w-full hover:bg-green-600 transition duration-300">
+        </form>
+    </div>
+
+
+    <!-- book tiket ends -->
+
+    <!-- Tourism trends section starts -->
+
+    <section class="travel" id="travel">
+
+
+        <h1 class="heading">
+            <span>t</span>
+            <span>r</span>
+            <span>a</span>
+            <span>v</span>
+            <span>e</span>
+            <span>l</span>
+            <span class="space"></span>
+            <span>t</span>
+            <span>r</span>
+            <span>e</span>
+            <span>n</span>
+            <span>d</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="flex flex-wrap justify-center gap-14">
+                <div class="bg-blue-50 rounded-full p-8 hover-border"
+                    style="width: 22rem; height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+                    class="hover-border">
+                    <img alt="Wind turbines on a pier" class="rounded-full mb-4 transition-all duration-300"
+                        height="160"
+                        src="https://storage.googleapis.com/a1aa/image/R8B2kSa8BRh1N5eM4G1TBzoTsJB5FKewOQhmpN5xqQQ.jpg"
+                        width="160" />
+                    <h2 class="text-blue-600 font-bold" style="font-size: 2rem; text-align: center;">
+                        Resort Travel
+                    </h2>
+                    <p class="text-green-500 mt-2" style="font-size: 1.5rem;">
+                        Explore now
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </p>
+                </div>
+                <div class="bg-blue-50 rounded-full p-8 hover-border"
+                    style="width: 22rem; height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+                    class="hover-border">
+                    <img alt="People enjoying water sports" class="rounded-full mb-4 transition-all duration-300"
+                        height="160"
+                        src="https://storage.googleapis.com/a1aa/image/XhCr8pMCMstPtu-kSQj93yweH6kreMNnu_JXJUl5GMg.jpg"
+                        width="160" />
+                    <h2 class="text-blue-600 font-bold" style="font-size: 2rem; text-align: center;">
+                        Experience Travel
+                    </h2>
+                    <p class="text-green-500 mt-2" style="font-size: 1.5rem;">
+                        Explore now
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </p>
+                </div>
+                <div class="bg-blue-50 rounded-full p-8 hover-border"
+                    style="width: 22rem; height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+                    class="hover-border">
+                    <img alt="People sitting on a beach" class="rounded-full mb-4 transition-all duration-300"
+                        height="160"
+                        src="https://storage.googleapis.com/a1aa/image/ope5iUmV_PzrnjkcaQeOPAm1C2iXQTGXsVcJSPHeh5g.jpg"
+                        width="160" />
+                    <h2 class="text-blue-600 font-bold" style="font-size: 2rem; text-align: center;">
+                        Business &amp; Leisure Travel
+                    </h2>
+                    <p class="text-green-500 mt-2" style="font-size: 1.5rem;">
+                        Explore now
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </p>
+                </div>
+                <div class="bg-blue-50 rounded-full p-8 hover-border"
+                    style="width: 22rem; height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+                    class="hover-border">
+                    <img alt="Golden Bridge in Vietnam" class="rounded-full mb-4 transition-all duration-300"
+                        height="160"
+                        src="https://storage.googleapis.com/a1aa/image/X2mPn9r_43QvPkNPSfvH-MmwCnUyxp_zBPH902sBK3Y.jpg"
+                        width="160" />
+                    <h2 class="text-blue-600 font-bold" style="font-size: 2rem; text-align: center;">
+                        Adventure Travel
+                    </h2>
+                    <p class="text-green-500 mt-2" style="font-size: 1.5rem;">
+                        Explore now
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </p>
+                </div>
+                <div class="bg-blue-50 rounded-full p-8 hover-border"
+                    style="width: 22rem; height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+                    class="hover-border">
+                    <img alt="Group of people on a beach" class="rounded-full mb-4 transition-all duration-300"
+                        height="160"
+                        src="https://storage.googleapis.com/a1aa/image/X6tDPIQ6HFl-MRDRVroRnnDmvF2lGXPWkeVPhLb9M-c.jpg"
+                        width="160" />
+                    <h2 class="text-blue-600 font-bold" style="font-size: 2rem; text-align: center;">
+                        Eco Travel
+                    </h2>
+                    <p class="text-green-500 mt-2" style="font-size: 1.5rem;">
+                        Explore now
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tourism trends section end -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading">
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
+            <span>e</span>
+            <span>r</span>
+            <span>y</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/0u680Gm4lBkbCuV_yPwjjHr9IlhyGYBOIluhem2Ee8Q.jpg"
+                    alt="Floating market in the Mekong Delta with boats filled with fruits and vegetables">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Floating market in the Mekong Delta with boats filled with fruits and vegetables.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/5DuKfMVf8gbMNN87QkiRsUQcB1EW1utwp4LTu_3i4b0.jpg"
+                    width="600" />" alt="Rice fields in the Mekong Delta with a farmer working">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Rice fields in the Mekong Delta with a farmer working.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/pjAq40syKKu6lJ_bP7JKnC7ciV9htnsDfipUGuVxWUs.jpg"
+                    alt="Cai Rang Floating Market with boats and vendors">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Cai Rang Floating Market with boats and vendors.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/H0NBrmLQd3aZomTF_bGPLUkNxSIXNxP_j1QZqajCyZE.jpg"
+                    alt="Tra Su Cajuput Forest with a boat navigating through the water">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Tra Su Cajuput Forest with a boat navigating through the water.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/qhLFxjeiA2H3b2VMI8RHp9_Aslk7FWW-rCMc8YgAgCU.jpg"
+                    alt="Vinh Trang Pagoda with its beautiful architecture">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Vinh Trang Pagoda with its beautiful architecture.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/RG6a1UGarB_IZfAH4tDlyree92xR5QTJRjiG2qwoE2w.jpg"
+                    alt="Sam Mountain with a panoramic view of the surrounding area">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Sam Mountain with a panoramic view of the surrounding area.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/Cws9PNBKNIyiN5vRaXi21zu6mT84QYtTTTIARxxUk9Q.jpg"
+                    alt="Tan Lap Floating Village with houses on stilts">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Tan Lap Floating Village with houses on stilts.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://storage.googleapis.com/a1aa/image/G3MIongtUW9ueY6_Qdgm7pTNh2tzNEZJaGILuRnvt5Y.jpg"
+                    alt="Dong Tam Snake Farm with various species of snakes">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Dong Tam Snake Farm with various species of snakes.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic1.png" alt="">
+                        <h3>john deo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt
+                            nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio
+                            molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic2.png" alt="">
+                        <h3>john deo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt
+                            nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio
+                            molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic3.png" alt="">
+                        <h3>john deo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt
+                            nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio
+                            molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic4.png" alt="">
+                        <h3>john deo</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt
+                            nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio
+                            molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- brand section  -->
+    <section class="brand-container">
+
+        <div class="swiper-container brand-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer section  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est
+                    accusantium voluptas enim nemo facilis sit debitis.</p>
+            </div>
+            <div class="box">
+                <h3>branch locations</h3>
+                <a href="#">india</a>
+                <a href="#">USA</a>
+                <a href="#">japan</a>
+                <a href="#">france</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">book</a>
+                <a href="#">packages</a>
+                <a href="#">trends</a>
+                <a href="#">gallery</a>
+                <a href="#">review</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+                <a href="#">linkedin</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Icon chat -->
+    <div class="chat-icon" onclick="toggleChat()">
+        💬
+    </div>
+
+    <!-- Cửa sổ chat -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">Chat Hỗ Trợ</div>
+        <div class="chat-body" id="chatBody">
+            <div class="message bot">Xin chào! Bạn cần hỗ trợ gì không?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 🔥 Dùng Firebase 8 thay vì Firebase 9 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginBtn = document.querySelector(".login-btn a");
+            const loggedInUser = localStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                const userData = JSON.parse(loggedInUser);
+                loginBtn.textContent = userData.email; // Hiển thị tên tài khoản
+                loginBtn.href = "#"; // Không cho người dùng vào trang login nữa
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const fullNameInput = document.getElementById("fullName");
+            const emailInput = document.getElementById("username");
+            const phoneContainer = document.getElementById("phoneContainer");
+            const phoneInput = document.getElementById("phone");
+            const visitCount = document.getElementById("visitCount");
+            const logoutBtn = document.getElementById("logout-btn");
+            const loginBtn = document.getElementById("login-btn");
+            const bookNowBtn = document.getElementById("book-now-btn");
+
+            const loggedInUser = localStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                const userData = JSON.parse(loggedInUser);
+
+                // Hiển thị thông tin chung
+                fullNameInput.value = userData.fullName;
+                emailInput.value = userData.email;
+
+                // Kiểm tra quyền user hay admin
+                if (userData.role === "user") {
+                    phoneContainer.style.display = "block"; // Hiện input phone
+                    phoneInput.value = userData.phoneNumber;
+                    visitCount.style.display = "none"; // Ẩn dòng "Đang tải..."
+                } else if (userData.role === "admin") {
+                    phoneContainer.style.display = "none"; // Ẩn input phone
+                    visitCount.textContent = "Admin có quyền quản lý hệ thống"; // Thay đổi nội dung
+                }
+            } else {
+                const login = document.getElementById("user-popup");
+                // Nếu chưa đăng nhập, cảnh báo khi nhấn vào biểu tượng user
+                loginBtn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    login.style.display = "none";
+                    alert("Bạn cần đăng nhập để truy cập tài khoản!");
+                });
+
+                // Nếu chưa đăng nhập, cảnh báo khi nhấn vào nút "Book Now"
+                bookNowBtn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    alert("Bạn cần đăng nhập để đặt chỗ!");
+                });
+            }
+
+            // Đăng xuất
+            logoutBtn.addEventListener("click", function () {
+                localStorage.removeItem("loggedInUser"); // Xóa thông tin đăng nhập
+                userPopup.style.display = "none"; // Đóng popup
+                window.location.reload(); // Tải lại trang
+            });
+        });
+
+
+        // 🔧 Cấu hình Firebase (THÊM databaseURL)
+        const firebaseConfig = {
+            apiKey: "AIzaSyAN94hxYgoW8gmq4gg-5yMR5zGgnOIDEwE",
+            authDomain: "travel-6a250.firebaseapp.com",
+            databaseURL: "https://travel-6a250-default-rtdb.firebaseio.com", // ✅ Thêm URL này
+            projectId: "travel-6a250",
+            storageBucket: "travel-6a250.appspot.com", // ✅ Sửa lại storageBucket
+            messagingSenderId: "448328265032",
+            appId: "1:448328265032:web:709258a19823b7d3ded77d",
+            measurementId: "G-XGEMB8J7YF"
+        };
+
+        // 🔥 Khởi tạo Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // 📌 Hàm hiển thị số lượt truy cập
+        function displayVisits() {
+            const visitRef = database.ref('visits');
+            visitRef.once('value')
+                .then((snapshot) => {
+                    const visits = snapshot.val();
+                    document.getElementById("visitCount").innerHTML = "Visitors: " + (visits || 0);
+                })
+                .catch((error) => {
+                    console.error("Lỗi khi lấy dữ liệu:", error);
+                });
+        }
+
+        // 📌 Hàm tăng số lượt truy cập
+        function incrementVisits() {
+            const visitRef = database.ref('visits');
+            visitRef.transaction((currentVisits) => {
+                return (currentVisits || 0) + 1;
+            }, (error, committed, snapshot) => {
+                if (error) {
+                    console.error("Lỗi khi cập nhật lượt truy cập:", error);
+                } else if (committed) {
+                    console.log("Lượt truy cập đã được cập nhật:", snapshot.val());
+                    displayVisits(); // Cập nhật số lượt truy cập trên UI
+                }
+            });
+        }
+
+        // ⏳ Chờ Firebase tải xong rồi gọi hàm
+        setTimeout(() => {
+            incrementVisits();
+        }, 2000);
+    </script>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

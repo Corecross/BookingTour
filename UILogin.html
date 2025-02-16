@@ -1,0 +1,166 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/login.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>| GoodTrip Việt Nam</title>
+</head>
+
+<body>
+  <!-- Messenger Plugin chat Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Plugin chat code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "112627521317796");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v12.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <div id="main">
+    <header id="header">
+
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>ravel</a>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#travel">trends</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+      </nav>
+
+      <div class="icons">
+        <!-- <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>  -->
+      </div>
+
+      <!-- User -->
+      <div class="user-section" onclick="alert('Hãy đăng nhập để sử dụng dịch vụ')">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="login-btn">
+        <a href="UILogin.html">Đăng nhập</a>
+      </div>
+
+      <!-- <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+
+
+    <!-- LOGIN -->
+    <div id="login">
+      <div class="login-banner">
+        <div class="uilogin">
+          <div class="login-top">
+            <img src="images/GoodTrip5.png" alt="Logonav" />
+            <h1>
+              ĐĂNG NHẬP VÀO <span style="color: #06aa2a">GOODTRIP</span>
+            </h1>
+          </div>
+          <div class="login-mid">
+            <input type="text" placeholder="Email" name="email" value="" />
+            <input name="password" placeholder="Mật khẩu" type="password" value="" />
+            <div class="sub-login-mid">
+              <p><a href="#">Đăng kí</a></p>
+              <p><a href="#">Quên mật khẩu?</a></p>
+            </div>
+          </div>
+          <div class="login-bot">
+            <input type="submit" value="Đăng nhập" />
+          </div>
+          <div class="another-login">
+            <div class="mxh">
+              <a href="" class="primary-btn"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="" class="primary-btn"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END LOGIN -->
+  </div>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const loginForm = document.getElementById("login");
+      const emailInput = loginForm.querySelector("input[name='email']"); // Đổi tên biến
+      const passwordInput = loginForm.querySelector("input[name='password']");
+      const submitButton = loginForm.querySelector("input[type='submit']");
+
+      const users = {
+        admin: { email: "admin@gmail.com", password: "123456", role: "admin", fullName: "Quản trị viên" },
+        user: { email: "user@gmail.com", password: "654321", role: "user", fullName: "Người dùng", phoneNumber: "0987654321" }
+      };
+
+      submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const email = emailInput.value.trim(); // Sử dụng emailInput
+        const password = passwordInput.value.trim();
+
+        let authenticatedUser = null;
+
+        Object.values(users).forEach(user => {
+          if (user.email === email && user.password === password) {
+            authenticatedUser = user;
+          }
+        });
+
+        if (authenticatedUser) {
+          alert("Đăng nhập thành công! Vai trò: " + authenticatedUser.role);
+          localStorage.setItem("loggedInUser", JSON.stringify(authenticatedUser)); // Lưu toàn bộ thông tin user
+          window.location.href = "home.html"; // Chuyển về trang chính
+        } else {
+          alert("Email hoặc mật khẩu không đúng!");
+        }
+      });
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
