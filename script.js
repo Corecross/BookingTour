@@ -126,3 +126,28 @@ var swiper = new Swiper(".brand-slider", {
 });
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const popup = document.getElementById("user-popup");
+//   const closeBtn = document.getElementById("form-close");
+
+//   // Hiển thị popup
+//   function showPopup() {
+//       popup.style.display = "flex";
+//   }
+
+//   // Đóng popup
+//   closeBtn.addEventListener("click", function () {
+//       popup.style.display = "none";
+//   });
+
+//   // Đóng popup khi click ra ngoài
+//   window.addEventListener("click", function (event) {
+//       if (event.target === popup) {
+//           popup.style.display = "none";
+//       }
+//   });
+
+//   // Mở popup khi cần (có thể gọi hàm này từ nút bấm)
+//   // showPopup();
+// });
+
