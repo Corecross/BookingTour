@@ -1,0 +1,583 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Poppins:wght@400;500;700&family=Roboto:wght@300;400&family=Open+Sans:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/slider.css" />
+  <link rel="stylesheet" href="CSS/blog.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>| GoodTrip Việt Nam</title>
+  <style>
+    /* Áp dụng font cho toàn bộ trang */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Tiêu đề chính (h1) */
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Tiêu đề phụ (h2) */
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    /* Nội dung văn bản (p, đoạn văn) */
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Nút bấm (CTA) */
+    button,
+    .btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      background-color: #ffd700;
+      border: none;
+      color: #1a1a1a;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover,
+    .btn:hover {
+      background-color: #e6c200;
+    }
+
+    /* Đảm bảo các thẻ khác (h3, h4, v.v.) cũng có font phù hợp */
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #000;
+    }
+
+    a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e6c200;
+    }
+
+    /* Thêm hiệu ứng cuộn mượt mà */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Điều chỉnh bố cục và kích thước chữ */
+    .news-col {
+      display: flex;
+      max-width: 114rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .col8 {
+      width: 70%;
+      padding-right: 3rem;
+    }
+
+    .col4 {
+      width: 30%;
+    }
+
+    .t-gold {
+      display: block;
+      font-weight: 900 !important;
+      margin-top: 5rem;
+    }
+
+    .news-content h2 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: #000;
+    }
+
+    .news-content p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .news-content h3 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 3rem 0 1.5rem;
+      color: #000;
+    }
+
+    .news-content h4 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: 2rem 0 1rem;
+      color: #06aa2a;
+    }
+
+    .news-content ul {
+      list-style: none;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .news-content ul li {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: #333;
+    }
+
+    .news-content ul li::before {
+      content: "✔";
+      color: #06aa2a;
+      position: absolute;
+      left: -2rem;
+      font-size: 1.6rem;
+    }
+
+    .news-img {
+      margin: 2rem 0;
+    }
+
+    .news-img img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .title-img {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .care {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: #666;
+    }
+
+    .care i {
+      cursor: pointer;
+    }
+
+    .care i:hover {
+      color: #06aa2a;
+    }
+
+    .sidenav {
+      position: sticky;
+      top: 7rem;
+      width: 90%;
+      box-shadow: 0 2px 11px #f0f0f0;
+      padding: 1vw 1.5vw;
+      margin: 0 auto;
+    }
+
+    .sidenav .header-sidenav {
+      margin-bottom: 1vw;
+      font-size: 2.5rem;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      line-height: 1.5;
+      color: #06aa2a;
+    }
+
+    .sidenav .newslist {
+      background: 0 0;
+      list-style: none;
+    }
+
+    .sidenav .newslist a {
+      font-weight: 400;
+      line-height: 1.5;
+      color: #262626;
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 1.8rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .sidenav .newslist li:hover a {
+      color: #06aa2a;
+      transform: scale(1.01);
+    }
+
+    /* Popup styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #06aa2a;
+    }
+
+    .popup-content label {
+      font-size: 1.4rem;
+      color: #333;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-content input,
+    .popup-content select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.3rem;
+      font-size: 1.4rem;
+    }
+
+    .popup-content .total-price {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #06aa2a;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .popup-content .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .popup-content .calculate-btn,
+    .popup-content .confirm-btn {
+      background-color: #06aa2a;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+
+    .popup-content .calculate-btn:hover,
+    .popup-content .confirm-btn:hover {
+      background-color: #059124;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Phần tiêu đề bắt đầu -->
+  <header id="header">
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+      <a href="home.html">trang chủ</a>
+      <a href="#book">đặt chỗ</a>
+      <a href="#packages">gói du lịch</a>
+      <a href="#travel">xu hướng</a>
+      <a href="#gallery">thư viện</a>
+      <a href="#review">đánh giá</a>
+    </nav>
+    <div class="icons">
+      <!-- <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i> -->
+    </div>
+    <!-- Phần người dùng -->
+    <div class="user-section">
+      <i class="fas fa-user" id="login-btn"></i>
+    </div>
+    <div class="login-btn">
+      <a href="UILogin.html">Đăng nhập</a>
+    </div>
+  </header>
+
+  <!-- Phần tiêu đề kết thúc -->
+
+  <!-- CONTAINER -->
+  <div id="timhieucantho"></div>
+  <div id="newscontainer">
+    <div class="header">
+      <div class="introduct">
+        <div class="container">
+          <div class="content center">
+            <h5 class="t-black">ĐI KHẮP VIỆT NAM</h5>
+            <h5 class="t-black bot-content">
+              KHÁM PHÁ VẺ ĐẸP THIÊN NHIÊN VÀ VĂN HÓA ĐỒNG THÁP
+            </h5>
+            <span class="line gold"></span>
+            <h2 class="t-content" style="font-size: 700 !important; font-size: 50px;">
+              TOUR DU LỊCH TRÀM CHIM
+              <span class="t-gold">1 NGÀY</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="news-col">
+      <div class="col8">
+        <div class="news-content">
+          <h2 id="tour">TOUR DU LỊCH TRÀM CHIM 1 NGÀY</h2>
+          <p><strong>Giá:</strong> 1.050.000 VNĐ/1 người (từ 11 tuổi) | 650.000 VNĐ/1 trẻ dưới 10 tuổi</p>
+          <p><strong>Giảm giá:</strong> 10%/người nếu đăng ký theo nhóm từ 4 người</p>
+          <p><strong>Thời gian:</strong> 1 ngày</p>
+          <p><strong>Mục tiêu:</strong> Du lịch thân thiện với môi trường, khám phá thiên nhiên và văn hóa địa phương.</p>
+          <p><strong>Phương tiện di chuyển:</strong></p>
+          <ul>
+            <li>Xe buýt thân thiện môi trường: Giảm thiểu khí thải và bảo vệ không khí trong lành.</li>
+            <li>Thuyền tre: Thay thế thuyền máy để giảm ô nhiễm nước.</li>
+          </ul>
+          <p><strong>Lộ trình:</strong> Cần Thơ – Vườn quốc gia Tràm Chim – TP.HCM</p>
+
+          <!-- Nút xác nhận đặt tour -->
+          <button class="btn" onclick="openPopup()">XÁC NHẬN ĐẶT TOUR</button>
+
+          <h3 id="lichtrinh">Lịch trình tour</h3>
+          <div class="news-img">
+            <img src="images/new/Picture1.png" alt="Vườn Quốc Gia Tràm Chim" />
+            <div class="title-img">Vườn Quốc Gia Tràm Chim - Thiên nhiên tuyệt đẹp (nguồn sưu tầm)</div>
+          </div>
+          <h4>Buổi sáng:</h4>
+          <p>
+            05:30: Xe đón quý khách tại điểm hẹn, khởi hành đi Đồng Tháp.
+          </p>
+          <p>
+            07:00: Đoàn dùng bữa sáng tại nhà hàng khu vực Trung Lương – Mỹ Tho với đặc sản Hủ Tiếu Mỹ Tho nổi tiếng.
+          </p>
+          <p>
+            07:45: Tiếp tục lộ trình, đến với Đồng Tháp, khám phá mùa nước nổi khu vực phía Nam.
+          </p>
+          <p>
+            09:30: Đoàn đến Đồng Tháp tham quan <strong>Khu di tích Xẻo Quýt</strong>:
+          </p>
+          <p>
+            Xẻo Quýt là căn cứ Cách Mạng (từ năm 1960-1975) của cơ quan Tỉnh ủy Đồng Tháp lãnh đạo nhân dân kháng chiến chống Mỹ. Trong suốt hành trình cuộc kháng chiến, Xẻo Quýt đã phải hứng chịu rất nhiều trận mưa bom, bão đạn của kẻ thù. Nhưng với tinh thần dân tộc, lòng dũng cảm, chịu đựng hiểm nguy và tài trí thao lược, quân và dân Đồng Tháp đã xoay chuyển tình thế, khắc phục khó khăn, mang chiến thắng về cho quê hương, đất nước.
+          </p>
+          <p>
+            Được công nhận di tích lịch sử quốc gia năm 1992, Xẻo Quýt là điểm du lịch về nguồn chứa đựng muôn điều thú vị của tự nhiên hoang sơ và là nơi lưu giữ vết tích của thời kỳ đấu tranh gian khổ của quân dân Đồng Tháp.
+          </p>
+          <div class="news-img">
+            <img src="images/new/Picture2.png" alt="Khu di tích Xẻo Quýt" />
+            <div class="title-img">Khu di tích Xẻo Quýt - Căn cứ Cách Mạng (nguồn sưu tầm)</div>
+          </div>
+
+          <h4>Buổi trưa:</h4>
+          <p>
+            11:30: Đoàn di chuyển vào nhà hàng dùng cơm trưa, với những đặc sản tour Đồng Tháp như: Cá lóc nướng trui; chuột đồng nướng; lươn đồng nấu chua; ếch nướng mọi; cá rô đồng kho tộ... giữa những giai điệu đờn ca tài tử ngọt ngào, sâu lắng, chắc chắn sẽ mang đến cho du khách những trải nghiệm và phút giây thú vị nhất trong chuyến tour Đồng Tháp.
+          </p>
+          <p>
+            13:30: Đoàn tiếp tục tham quan <strong>Vườn Quốc Gia Tràm Chim</strong>:
+          </p>
+          <p>
+            Nằm ở hạ lưu sông Mêkông và trung tâm Đồng Tháp Mười, cách sông Tiền khoảng 25km về phía Tây, gần biên giới Việt Nam – Campuchia, Tràm Chim có cảnh quan thiên nhiên tuyệt đẹp với mênh mang sông nước, một màu xanh của rừng Tràm ngút ngàn và thảm thực vật phong phú với hơn 130 loài thực vật khác nhau.
+          </p>
+          <div class="news-img">
+            <img src="images/new/Picture3.png" alt="Vườn Quốc Gia Tràm Chim" />
+            <div class="title-img">Vườn Quốc Gia Tràm Chim - Thiên nhiên tuyệt đẹp (nguồn sưu tầm)</div>
+          </div>
+
+          <h4>Buổi chiều:</h4>
+          <p>
+            15:00: Du khách bắt đầu hành trình tham quan bằng thuyền. Trên suốt hành trình tham quan, du khách sẽ được thuyền đưa đến tham quan những cánh đồng sen, sung và lúa mạ. Đi qua những khu rừng, những sân chim với hàng chục đàn chim bay lượn trên không. Không những thế, du khách còn được dừng chân, lên đài quan sát và phóng tầm mắt để có thể cảm nhận hết được vẻ đẹp của vùng đất Tràm Chim – một trong những điểm tuyệt vời của tour Đồng Tháp.
+          </p>
+          <div class="news-img">
+            <img src="images/new/Picture4.png" alt="Vườn Quốc Gia Tràm Chim" />
+            <!-- <div class="title-img">Vườn Quốc Gia Tràm Chim - Thiên nhiên tuyệt đẹp (nguồn sưu tầm)</div> -->
+          </div>
+          <p>
+            16:00: Khởi hành về lại TP.HCM, kết thúc tour du lịch sinh thái ở Tràm Chim.
+          </p>
+
+          <h3 id="hoatdong">Các hoạt động nổi bật, thân thiện với môi trường trong tour:</h3>
+          <p><strong>Phương tiện di chuyển xanh:</strong></p>
+          <ul>
+            <li>Xe điện thân thiện môi trường giúp giảm ô nhiễm không khí và tiết kiệm năng lượng.</li>
+            <li>Thuyền tre thay thế thuyền máy, giúp bảo vệ nguồn nước.</li>
+          </ul>
+          <p><strong>Khám phá thiên nhiên và bảo tồn hệ sinh thái:</strong></p>
+          <ul>
+            <li>Tham quan vườn quốc gia Tràm Chim và các khu bảo tồn sinh thái.</li>
+            <li>Tìm hiểu về canh tác hữu cơ và cách bảo vệ môi trường trong nông nghiệp.</li>
+          </ul>
+
+          <h3 id="loiich">Lợi ích của tour sinh thái:</h3>
+          <ul>
+            <li>Bảo vệ thiên nhiên: Tour giúp bảo tồn các khu vực sinh thái tự nhiên, ngăn ngừa khai thác tài nguyên quá mức và ô nhiễm môi trường.</li>
+            <li>Khuyến khích du lịch bền vững: Đưa ra mô hình du lịch thân thiện với môi trường, hạn chế sử dụng nhựa, giảm thiểu tác động đến hệ sinh thái.</li>
+            <li>Trải nghiệm gần gũi với thiên nhiên: Du khách sẽ có cơ hội khám phá những cảnh đẹp nguyên sơ, tham gia vào các hoạt động bảo vệ môi trường, đồng thời hòa mình vào không gian xanh mát.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col4">
+        <div class="sidenav">
+          <h3 class="header-sidenav">Nội dung chính</h3>
+          <ul class="newslist" style="list-style-type: none">
+            <li>
+              <a href="#tour">TOUR DU LỊCH TRÀM CHIM 1 NGÀY</a>
+            </li>
+            <li>
+              <a href="#lichtrinh">Lịch trình tour</a>
+            </li>
+            <li>
+              <a href="#hoatdong">Các hoạt động nổi bật</a>
+            </li>
+            <li>
+              <a href="#loiich">Lợi ích của tour</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup đặt tour -->
+  <div class="popup" id="bookingPopup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h3>Đặt Tour Tràm Chim 1 Ngày</h3>
+      <form id="bookingForm">
+        <label for="tourDate">Chọn ngày khởi hành:</label>
+        <input type="date" id="tourDate" required>
+
+        <label for="adults">Số người lớn (từ 11 tuổi):</label>
+        <input type="number" id="adults" min="0" value="0" required>
+
+        <label for="children">Số trẻ em (dưới 10 tuổi):</label>
+        <input type="number" id="children" min="0" value="0" required>
+
+        <button type="button" class="calculate-btn" onclick="calculateTotal()">Tính tổng tiền</button>
+        <button type="button" class="confirm-btn" onclick="confirmBooking()" style="display: none;" id="confirmBtn">Xác nhận đặt</button>
+        <p class="total-price" id="totalPrice"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Mở popup
+    function openPopup() {
+      document.getElementById('bookingPopup').style.display = 'flex';
+    }
+
+    // Đóng popup
+    function closePopup() {
+      document.getElementById('bookingPopup').style.display = 'none';
+      document.getElementById('totalPrice').style.display = 'none'; // Ẩn tổng tiền khi đóng popup
+      document.getElementById('confirmBtn').style.display = 'none'; // Ẩn nút xác nhận khi đóng popup
+      document.getElementById('bookingForm').reset(); // Reset form
+    }
+
+    // Tính tổng tiền
+    function calculateTotal() {
+      const adultPrice = 1050000; // Giá người lớn
+      const childPrice = 650000; // Giá trẻ em
+      const discountThreshold = 4; // Số người để được giảm giá
+      const discountRate = 0.1; // 10% giảm giá
+
+      const adults = parseInt(document.getElementById('adults').value) || 0;
+      const children = parseInt(document.getElementById('children').value) || 0;
+      const totalPeople = adults + children;
+
+      if (totalPeople === 0) {
+        alert('Vui lòng nhập số lượng người tham gia!');
+        return;
+      }
+
+      let total = adults * adultPrice + children * childPrice;
+
+      // Áp dụng giảm giá nếu tổng số người từ 4 trở lên
+      if (totalPeople >= discountThreshold) {
+        total = total * (1 - discountRate);
+      }
+
+      // Hiển thị tổng tiền
+      const totalPriceElement = document.getElementById('totalPrice');
+      totalPriceElement.textContent = `Tổng tiền: ${total.toLocaleString('vi-VN')} VNĐ`;
+      totalPriceElement.style.display = 'block';
+
+      // Hiển thị nút xác nhận đặt
+      document.getElementById('confirmBtn').style.display = 'inline-block';
+    }
+
+    // Xác nhận đặt tour
+    function confirmBooking() {
+      const tourDate = document.getElementById('tourDate').value;
+      const adults = document.getElementById('adults').value;
+      const children = document.getElementById('children').value;
+
+      if (!tourDate) {
+        alert('Vui lòng chọn ngày khởi hành!');
+        return;
+      }
+
+      alert(`Đặt tour thành công!\nNgày khởi hành: ${tourDate}\nSố người lớn: ${adults}\nSố trẻ em: ${children}`);
+      closePopup();
+    }
+  </script>
+</body>
+
+</html>
