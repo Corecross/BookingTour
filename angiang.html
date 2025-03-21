@@ -1,0 +1,407 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Poppins:wght@400;500;700&family=Roboto:wght@300;400&family=Open+Sans:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/slider.css" />
+  <link rel="stylesheet" href="CSS/blog.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>| GoodTrip Việt Nam</title>
+  <style>
+    /* Áp dụng font cho toàn bộ trang */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Tiêu đề chính (h1) */
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Tiêu đề phụ (h2) */
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    /* Nội dung văn bản (p, đoạn văn) */
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Nút bấm (CTA) */
+    button,
+    .btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      background-color: #ffd700;
+      border: none;
+      color: #1a1a1a;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover,
+    .btn:hover {
+      background-color: #e6c200;
+    }
+
+    /* Đảm bảo các thẻ khác (h3, h4, v.v.) cũng có font phù hợp */
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #000;
+    }
+
+    a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e6c200;
+    }
+
+    /* Thêm hiệu ứng cuộn mượt mà */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Điều chỉnh bố cục và kích thước chữ */
+    .news-col {
+      display: flex;
+      max-width: 114rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .col8 {
+      width: 70%;
+      padding-right: 3rem;
+    }
+
+    .col4 {
+      width: 30%;
+    }
+
+    .t-gold {
+      display: block;
+      font-weight: 900 !important;
+      margin-top: 5rem;
+    }
+
+    .news-content h2 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: #000;
+    }
+
+    .news-content p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .news-content h3 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 3rem 0 1.5rem;
+      color: #000;
+    }
+
+    .news-content h4 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: 2rem 0 1rem;
+      color: #06aa2a;
+    }
+
+    .news-content ul {
+      list-style: none;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .news-content ul li {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: #333;
+    }
+
+    .news-content ul li::before {
+      content: "✔";
+      color: #06aa2a;
+      position: absolute;
+      left: -2rem;
+      font-size: 1.6rem;
+    }
+
+    .news-img {
+      margin: 2rem 0;
+    }
+
+    .news-img img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .title-img {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .care {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: #666;
+    }
+
+    .care i {
+      cursor: pointer;
+    }
+
+    .care i:hover {
+      color: #06aa2a;
+    }
+
+    .sidenav {
+      position: sticky;
+      top: 7rem;
+      width: 90%;
+      box-shadow: 0 2px 11px #f0f0f0;
+      padding: 1vw 1.5vw;
+      margin: 0 auto;
+    }
+
+    .sidenav .header-sidenav {
+      margin-bottom: 1vw;
+      font-size: 2.5rem;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      line-height: 1.5;
+      color: #06aa2a;
+    }
+
+    .sidenav .newslist {
+      background: 0 0;
+      list-style: none;
+    }
+
+    .sidenav .newslist a {
+      font-weight: 400;
+      line-height: 1.5;
+      color: #262626;
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 1.8rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .sidenav .newslist li:hover a {
+      color: #06aa2a;
+      transform: scale(1.01);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Phần tiêu đề bắt đầu -->
+  <header id="header">
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+      <a href="home.html">trang chủ</a>
+      <a href="#book">đặt chỗ</a>
+      <a href="#packages">gói du lịch</a>
+      <a href="#travel">xu hướng</a>
+      <a href="#gallery">thư viện</a>
+      <a href="#review">đánh giá</a>
+    </nav>
+    <div class="icons">
+      <!-- <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i> -->
+    </div>
+    <!-- Phần người dùng -->
+    <div class="user-section">
+      <i class="fas fa-user" id="login-btn"></i>
+    </div>
+    <div class="login-btn">
+      <a href="UILogin.html">Đăng nhập</a>
+    </div>
+  </header>
+
+  <!-- Phần tiêu đề kết thúc -->
+
+  <!-- CONTAINER -->
+  <div id="timhieucantho"></div>
+  <div id="newscontainer">
+    <div class="header">
+      <div class="introduct">
+        <div class="container">
+          <div class="content center">
+            <h5 class="t-black">ĐI KHẮP VIỆT NAM</h5>
+            <h5 class="t-black bot-content">
+              KHÁM PHÁ VẺ ĐẸP VĂN HÓA VÀ THIÊN NHIÊN AN GIANG
+            </h5>
+            <span class="line gold"></span>
+            <h2 class="t-content" style="font-size: 700 !important; font-size: 50px;">
+              TOUR DU LỊCH AN GIANG
+              <span class="t-gold">1 NGÀY</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="news-col">
+      <div class="col8">
+        <div class="news-content">
+          <h2 id="tour">TOUR DU LỊCH AN GIANG 1 NGÀY</h2>
+          <p><strong>Giá:</strong> 1.200.000 VNĐ/1 người lớn (từ 11 tuổi) | 700.000 VNĐ/1 trẻ em (dưới 10 tuổi)</p>
+          <p><strong>Thời gian:</strong> 1 ngày</p>
+          <p><strong>Mục tiêu:</strong> Trải nghiệm văn hóa, khám phá thiên nhiên và di tích lịch sử nổi bật tại An Giang.</p>
+          <p><strong>Phương tiện di chuyển:</strong></p>
+          <ul>
+            <li>Xe ô tô hiện đại: Đảm bảo tiện nghi và thân thiện với môi trường.</li>
+            <li>Thuyền địa phương: Tận hưởng cảnh đẹp miền sông nước.</li>
+          </ul>
+
+          <h3 id="lichtrinh">Lịch trình tour</h3>
+          <h4>Buổi sáng:</h4>
+          <p>
+            05:30: Xe đón khách tại điểm hẹn, khởi hành đi An Giang.
+          </p>
+          <p>
+            07:00: Dùng bữa sáng với đặc sản bánh bò thốt nốt và cà phê tại Châu Đốc.
+          </p>
+          <p>
+            08:30: Tham quan <strong>Miếu Bà Chúa Xứ Núi Sam</strong>, nơi linh thiêng và nổi tiếng bậc nhất miền Tây.
+          </p>
+          <p>
+            10:00: Tham quan <strong>Rừng Tràm Trà Sư</strong>:
+          </p>
+          <ul>
+            <li>Khám phá hệ sinh thái độc đáo với thảm thực vật phong phú và nhiều loài chim quý hiếm.</li>
+            <li>Đi thuyền len lỏi qua các con rạch nhỏ, tận hưởng không khí trong lành.</li>
+          </ul>
+          <p>
+            “Rừng Tràm Trà Sư, nằm tại huyện Tịnh Biên, tỉnh An Giang, là khu rừng ngập nước đặc trưng của miền Tây Nam Bộ với diện tích 850 ha. Nơi đây nổi bật với hệ sinh thái phong phú, bao gồm hơn 140 loài thực vật, 70 loài chim quý hiếm như cò lạo Ấn Độ và điên điển phương Đông, cùng nhiều loài động vật khác. Với cảnh quan thiên nhiên hoang sơ, những con kênh chằng chịt và hàng tràm xanh mướt, rừng tràm mang đến không gian yên bình và không khí trong lành. Đặc biệt vào mùa nước nổi (từ tháng 9 đến tháng 11), khu rừng trở thành điểm đến lý tưởng để thư giãn, khám phá thiên nhiên và chiêm ngưỡng vẻ đẹp độc đáo của vùng đất này.”
+          </p>
+          <div class="news-img">
+            <img src="images/new/z6419622114015_2446d8aeabde2407d2254ce1967df324.jpg" alt="Rừng Tràm Trà Sư" />
+            <div class="title-img">Rừng Tràm Trà Sư - Hệ sinh thái phong phú (nguồn sưu tầm)</div>
+          </div>
+
+          <h4>Buổi trưa:</h4>
+          <p>
+            12:00: Dùng cơm trưa với các món đặc sản miền Tây như: lẩu cá linh bông điên điển, gỏi sầu đâu, và cá rô kho tộ.
+          </p>
+          <p>
+            Nghỉ ngơi, thư giãn trong không gian mát mẻ, yên bình.
+          </p>
+
+          <h4>Buổi chiều:</h4>
+          <p>
+            13:30: Tiếp tục hành trình đến <strong>Làng Chăm Đa Phước</strong>:
+          </p>
+          <ul>
+            <li>Tìm hiểu văn hóa, phong tục tập quán của cộng đồng Chăm Islam.</li>
+            <li>Thưởng thức các sản phẩm dệt thủ công truyền thống.</li>
+          </ul>
+          <p>
+            Làng Chăm ở An Giang, đặc biệt là Làng Chăm Đa Phước và Châu Giang, là nơi sinh sống của cộng đồng người Chăm theo đạo Hồi. Những ngôi làng này nổi bật với kiến trúc nhà sàn truyền thống, các thánh đường Hồi giáo uy nghi như Masjid Al Ehsan và Mubarak, cùng nghề dệt thổ cẩm tinh xảo. Người Chăm tại đây vẫn giữ gìn bản sắc văn hóa và phong tục tập quán độc đáo, từ trang phục truyền thống đến ẩm thực đặc trưng. Đây là điểm đến lý tưởng để khám phá sự giao thoa văn hóa và trải nghiệm không gian yên bình giữa miền sông nước.
+          </p>
+          <div class="news-img">
+            <img src="images/new/z6419622104458_4aea6bcf111b3729edd130e51294ae7c.jpg" alt="Làng Chăm Đa Phước" />
+            <div class="title-img">Làng Chăm Đa Phước - Văn hóa đặc sắc (nguồn sưu tầm)</div>
+          </div>
+          <p>
+            15:00: Tham quan <strong>Chợ Tịnh Biên</strong>, mua sắm đặc sản địa phương như mắm Châu Đốc, đường thốt nốt, và các loại khô.
+          </p>
+          <p>
+            16:30: Khởi hành về lại Cần Thơ, kết thúc chuyến đi.
+          </p>
+
+          <h3 id="hoatdong">Các hoạt động nổi bật trong tour:</h3>
+          <ul>
+            <li>Trải nghiệm giao thoa văn hóa: Tham quan các địa điểm lịch sử, văn hóa đặc sắc của An Giang.</li>
+            <li>Khám phá thiên nhiên: Chiêm ngưỡng vẻ đẹp nguyên sơ của rừng Tràm và các dòng sông.</li>
+            <li>Hỗ trợ cộng đồng địa phương: Tham quan làng nghề, thưởng thức sản phẩm truyền thống.</li>
+          </ul>
+
+          <h3 id="loiich">Lợi ích của tour:</h3>
+          <ul>
+            <li>Giúp bảo vệ thiên nhiên và hệ sinh thái.</li>
+            <li>Khuyến khích du lịch văn minh, bền vững.</li>
+            <li>Tận hưởng những phút giây thư giãn, gần gũi với thiên nhiên.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col4">
+        <div class="sidenav">
+          <h3 class="header-sidenav">Nội dung chính</h3>
+          <ul class="newslist" style="list-style-type: none">
+            <li>
+              <a href="#tour">TOUR DU LỊCH AN GIANG 1 NGÀY</a>
+            </li>
+            <li>
+              <a href="#lichtrinh">Lịch trình tour</a>
+            </li>
+            <li>
+              <a href="#hoatdong">Các hoạt động nổi bật</a>
+            </li>
+            <li>
+              <a href="#loiich">Lợi ích của tour</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

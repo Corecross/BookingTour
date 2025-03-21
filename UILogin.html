@@ -57,7 +57,7 @@
       <a href="#" class="logo"><span>T</span>ravel</a>
 
       <nav class="navbar">
-        <a href="index.html">home</a>
+        <a href="home.html">home</a>
         <a href="#book">book</a>
         <a href="#packages">packages</a>
         <a href="#travel">trends</a>
@@ -69,19 +69,6 @@
         <!-- <i class="fas fa-search" id="search-btn"></i>
             <i class="fas fa-user" id="login-btn"></i>  -->
       </div>
-
-      <!-- User -->
-      <div class="user-section" onclick="alert('Hãy đăng nhập để sử dụng dịch vụ')">
-        <i class="fas fa-user"></i>
-      </div>
-      <div class="login-btn">
-        <a href="UILogin.html">Đăng nhập</a>
-      </div>
-
-      <!-- <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for="search-bar" class="fas fa-search"></label>
-        </form> -->
 
     </header>
 
@@ -100,9 +87,21 @@
             <input type="text" placeholder="Email" name="email" value="" />
             <input name="password" placeholder="Mật khẩu" type="password" value="" />
             <div class="sub-login-mid">
-              <p><a href="#">Đăng kí</a></p>
-              <p><a href="#">Quên mật khẩu?</a></p>
+              <p><a href="UIRegister.html">Đăng kí</a></p>
+              <p><a href="#" onclick="openResetPassword()">Quên mật khẩu?</a></p>
             </div>
+
+            <!-- Popup Modal -->
+            <div id="resetPasswordModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeResetPassword()">&times;</span>
+                <h2>Quên mật khẩu</h2>
+                <input type="email" id="resetEmail" name="resetEmail" placeholder="Nhập email của bạn" style="text-transform: none;">
+                <button onclick="sendResetEmail()">Gửi OTP</button>
+                <p id="message"></p>
+              </div>
+            </div>
+
           </div>
           <div class="login-bot">
             <input type="submit" value="Đăng nhập" />
@@ -121,42 +120,114 @@
 
 
 
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+
   <script>
+    const ADMIN_EMAIL = "admin@gmail.com";
+    const ADMIN_PASSWORD = "123456";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAN94hxYgoW8gmq4gg-5yMR5zGgnOIDEwE",
+      authDomain: "travel-6a250.firebaseapp.com",
+      databaseURL: "https://travel-6a250-default-rtdb.firebaseio.com",
+      projectId: "travel-6a250",
+      storageBucket: "travel-6a250.appspot.com",
+      messagingSenderId: "448328265032",
+      appId: "1:448328265032:web:709258a19823b7d3ded77d",
+      measurementId: "G-XGEMB8J7YF"
+    };
+
+    // Khởi tạo Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
     document.addEventListener("DOMContentLoaded", function () {
       const loginForm = document.getElementById("login");
-      const emailInput = loginForm.querySelector("input[name='email']"); // Đổi tên biến
+      const emailInput = loginForm.querySelector("input[name='email']");
       const passwordInput = loginForm.querySelector("input[name='password']");
       const submitButton = loginForm.querySelector("input[type='submit']");
-
-      const users = {
-        admin: { email: "admin@gmail.com", password: "123456", role: "admin", fullName: "Quản trị viên" },
-        user: { email: "user@gmail.com", password: "654321", role: "user", fullName: "Người dùng", phoneNumber: "0987654321" }
-      };
 
       submitButton.addEventListener("click", function (event) {
         event.preventDefault();
 
-        const email = emailInput.value.trim(); // Sử dụng emailInput
+        const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
 
-        let authenticatedUser = null;
+        console.log("📌 Click đăng nhập");
+        console.log("📌 Email nhập:", email);
+        console.log("📌 Password nhập:", password);
 
-        Object.values(users).forEach(user => {
-          if (user.email === email && user.password === password) {
-            authenticatedUser = user;
-          }
-        });
+        if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+          console.log("📌 Đăng nhập ADMIN");
 
-        if (authenticatedUser) {
-          alert("Đăng nhập thành công! Vai trò: " + authenticatedUser.role);
-          localStorage.setItem("loggedInUser", JSON.stringify(authenticatedUser)); // Lưu toàn bộ thông tin user
-          window.location.href = "home.html"; // Chuyển về trang chính
-        } else {
-          alert("Email hoặc mật khẩu không đúng!");
+          localStorage.setItem("loggedInUser", JSON.stringify({
+            email: email,
+            role: "admin"
+          }));
+
+          alert("Đăng nhập với quyền ADMIN!");
+          window.location.href = "home.html";
+          return;
         }
+
+        auth.signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            console.log("📌 Đăng nhập thành công:", userCredential);
+
+            const user = userCredential.user;
+            firebase.database().ref("users/" + user.uid).once("value")
+              .then((snapshot) => {
+                const userData = snapshot.val();
+                console.log("📌 Dữ liệu user từ Firebase:", userData);
+
+                if (userData) {
+                  localStorage.setItem("loggedInUser", JSON.stringify(userData));
+                  alert("Đăng nhập thành công!");
+                  window.location.href = "home.html";
+                } else {
+                  alert("Không tìm thấy dữ liệu user!");
+                }
+              });
+          })
+          .catch((error) => {
+            console.error("❌ Lỗi đăng nhập:", error);
+            alert("Đăng nhập thất bại: " + error.message);
+          });
       });
     });
 
+    function openResetPassword() {
+  let modal = document.getElementById("resetPasswordModal");
+  if (modal) {
+    modal.style.display = "block";
+  } else {
+    console.error("❌ Không tìm thấy modal reset password");
+  }
+}
+
+function closeResetPassword() {
+  document.getElementById("resetPasswordModal").style.display = "none";
+}
+
+function sendResetEmail() {
+  const email = document.getElementById("resetEmail").value.trim();
+  if (!email) {
+    document.getElementById("message").innerText = "Vui lòng nhập email!";
+    return;
+  }
+
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+      document.getElementById("message").innerText = "Một email đặt lại mật khẩu đã được gửi!";
+    })
+    .catch((error) => {
+      document.getElementById("message").innerText = "Lỗi: " + error.message;
+    });
+}
 
 
   </script>

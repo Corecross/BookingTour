@@ -1,0 +1,185 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/register.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>| GoodTrip Việt Nam</title>
+</head>
+
+<body>
+  <!-- Messenger Plugin chat Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Plugin chat code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "112627521317796");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v12.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <div id="main">
+    <header id="header">
+
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>ravel</a>
+
+      <nav class="navbar">
+        <a href="home.html">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#travel">trends</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+      </nav>
+
+      <div class="icons">
+        <!-- <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>  -->
+      </div>
+
+    </header>
+
+
+    <!-- LOGIN -->
+    <div id="login">
+      <div class="login-banner">
+        <div class="uilogin">
+          <div class="login-top">
+            <img src="images/GoodTrip5.png" alt="Logonav" />
+            <h1>
+              ĐĂNG KÍ VÀO <span style="color: #06aa2a">GOODTRIP</span>
+            </h1>
+          </div>
+          <div class="login-mid">
+            <input type="text" placeholder="Họ và tên" name="fullName" required />
+            <input type="email" placeholder="Email" name="email" value="" />
+            <input type="tel" placeholder="Số điện thoại" name="phoneNumber" required pattern="[0-9]{10,11}"
+              title="Số điện thoại phải có 10-11 chữ số" inputmode="numeric"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+            <input name="password" placeholder="Mật khẩu" type="password" value="" />
+            <input type="password" placeholder="Nhập lại mật khẩu" name="confirmPassword" required />
+            <p id="error-message" style="color: red; display: none;">Mật khẩu không khớp!</p>
+
+          </div>
+          <div class="login-bot">
+            <button id="register-btn">Đăng ký</button>
+          </div>
+
+          <div class="sub-login-mid">
+            <p>Đã có tài khoản? <a href="UILogin.html">Đăng nhập</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    // ✅ Cấu hình Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyAN94hxYgoW8gmq4gg-5yMR5zGgnOIDEwE",
+      authDomain: "travel-6a250.firebaseapp.com",
+      databaseURL: "https://travel-6a250-default-rtdb.firebaseio.com",
+      projectId: "travel-6a250",
+      storageBucket: "travel-6a250.appspot.com",
+      messagingSenderId: "448328265032",
+      appId: "1:448328265032:web:709258a19823b7d3ded77d",
+      measurementId: "G-XGEMB8J7YF"
+    };
+
+    // ✅ Khởi tạo Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const database = firebase.database();
+
+    // ✅ Xử lý đăng ký tài khoản
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("register-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Lấy dữ liệu từ form
+        const fullName = document.querySelector("input[name='fullName']").value;
+        const email = document.querySelector("input[name='email']").value;
+        const phoneNumber = document.querySelector("input[name='phoneNumber']").value;
+        const password = document.querySelector("input[name='password']").value;
+        const confirmPassword = document.querySelector("input[name='confirmPassword']").value;
+        const errorMessage = document.getElementById("error-message");
+
+        // Kiểm tra mật khẩu
+        if (password !== confirmPassword) {
+          errorMessage.style.display = "block";
+          return;
+        } else {
+          errorMessage.style.display = "none";
+        }
+
+        // Đăng ký tài khoản với Firebase Authentication
+        // Đăng ký tài khoản với Firebase Authentication
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+
+            // Lưu thông tin người dùng vào Firebase Database
+            database.ref("users/" + user.uid).set({
+              fullName: fullName,
+              email: email,
+              phoneNumber: phoneNumber
+            }).then(() => {
+              alert("Đăng ký thành công!");
+              window.location.href = "UILogin.html"; // Chuyển hướng sang trang đăng nhập
+            }).catch((error) => {
+              console.error("❌ Lỗi khi lưu vào Database:", error);
+              alert("Lỗi lưu Database: " + error.message);
+            });
+
+          })
+          .catch((error) => {
+            console.error("❌ Lỗi khi đăng ký:", error);
+            alert("Lỗi đăng ký: " + error.message);
+          });
+
+      });
+    });
+  </script>
+
+</body>
+
+</html>
