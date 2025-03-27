@@ -249,14 +249,17 @@ header .search-bar-container label:hover {
   flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
+  overflow: hidden;
 }
 
 .book .row .image {
   flex: 1 1 40rem;
+  overflow: hidden;
 }
 
 .book .row .image img {
-  width: 100%;
+    width: auto; 
+    object-fit: cover;
 }
 
 .book .row form {
@@ -446,11 +449,21 @@ header .search-bar-container label:hover {
   padding-bottom: 2rem;
 }
 
+.review .swiper-wrapper {
+  display: flex;
+  align-items: stretch; /* Đảm bảo các ô có cùng chiều cao */
+}
+
 .review .box {
   padding: 2rem;
   text-align: center;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
   border-radius: .5rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn nội dung đều nhau */
+  height: 100%; /* Đảm bảo các ô bằng nhau */
 }
 
 .review .box img {
@@ -458,7 +471,8 @@ header .search-bar-container label:hover {
   width: 13rem;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto; /* Canh giữa ảnh */
+  display: block;
 }
 
 .review .box h3 {
@@ -470,12 +484,21 @@ header .search-bar-container label:hover {
   color: #666;
   font-size: 1.5rem;
   padding: 1rem 0;
+  flex-grow: 1; /* Đảm bảo đoạn text giãn đều */
+  display: flex;
+  align-items: center; /* Căn giữa text theo chiều dọc */
+  justify-content: center;
+}
+
+.review .box .stars {
+  margin-top: auto; /* Đẩy phần sao xuống dưới cùng */
 }
 
 .review .box .stars i {
   color: var(--orange);
   font-size: 1.7rem;
 }
+
 
 .brand-container {
   text-align: center;

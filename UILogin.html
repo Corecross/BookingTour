@@ -9,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="shortcut icon" href="images/new/logo-removebg-preview.png" />
   <link rel="stylesheet" href="CSS/main.css" />
   <link rel="stylesheet" href="CSS/header.css" />
   <link rel="stylesheet" href="CSS/login.css" />
   <link rel="stylesheet" href="CSS/style.css" />
-  <title>| GoodTrip Việt Nam</title>
+  <title>| ECOPATH Việt Nam</title>
 </head>
 
 <body>
@@ -54,15 +54,17 @@
 
       <div id="menu-bar" class="fas fa-bars"></div>
 
-      <a href="#" class="logo"><span>T</span>ravel</a>
+      <a href="#" class="logo" style="width: 8rem;">
+        <img src="images/new/logo-removebg-preview.png" alt="Travel Logo" style=" filter: brightness(1.2); width: 90%;">
+      </a>
 
       <nav class="navbar">
-        <a href="home.html">home</a>
-        <a href="#book">book</a>
-        <a href="#packages">packages</a>
-        <a href="#travel">trends</a>
-        <a href="#gallery">gallery</a>
-        <a href="#review">review</a>
+        <a href="home.html">trang chủ</a>
+        <a href="home.html#book">đặt chỗ</a>
+        <a href="home.html#packages">gói du lịch</a>
+        <a href="home.html#travel">xu hướng</a>
+        <a href="home.html#gallery">thư viện</a>
+        <a href="home.html#review">đánh giá</a>
       </nav>
 
       <div class="icons">
@@ -78,9 +80,9 @@
       <div class="login-banner">
         <div class="uilogin">
           <div class="login-top">
-            <img src="images/GoodTrip5.png" alt="Logonav" />
-            <h1>
-              ĐĂNG NHẬP VÀO <span style="color: #06aa2a">GOODTRIP</span>
+            <img src="images/new/logo-removebg-preview.png" alt="Logonav" />
+            <h1 style="color: #06aa2a">
+              ĐĂNG NHẬP VÀO <span style="color: #06aa2a">ECOPATH</span>
             </h1>
           </div>
           <div class="login-mid">
@@ -96,7 +98,8 @@
               <div class="modal-content">
                 <span class="close" onclick="closeResetPassword()">&times;</span>
                 <h2>Quên mật khẩu</h2>
-                <input type="email" id="resetEmail" name="resetEmail" placeholder="Nhập email của bạn" style="text-transform: none;">
+                <input type="email" id="resetEmail" name="resetEmail" placeholder="Nhập email của bạn"
+                  style="text-transform: none;">
                 <button onclick="sendResetEmail()">Gửi OTP</button>
                 <p id="message"></p>
               </div>
@@ -106,12 +109,12 @@
           <div class="login-bot">
             <input type="submit" value="Đăng nhập" />
           </div>
-          <div class="another-login">
+          <!-- <div class="another-login">
             <div class="mxh">
               <a href="" class="primary-btn"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
               <a href="" class="primary-btn"><i class="fab fa-google"></i></a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -201,33 +204,33 @@
     });
 
     function openResetPassword() {
-  let modal = document.getElementById("resetPasswordModal");
-  if (modal) {
-    modal.style.display = "block";
-  } else {
-    console.error("❌ Không tìm thấy modal reset password");
-  }
-}
+      let modal = document.getElementById("resetPasswordModal");
+      if (modal) {
+        modal.style.display = "block";
+      } else {
+        console.error("❌ Không tìm thấy modal reset password");
+      }
+    }
 
-function closeResetPassword() {
-  document.getElementById("resetPasswordModal").style.display = "none";
-}
+    function closeResetPassword() {
+      document.getElementById("resetPasswordModal").style.display = "none";
+    }
 
-function sendResetEmail() {
-  const email = document.getElementById("resetEmail").value.trim();
-  if (!email) {
-    document.getElementById("message").innerText = "Vui lòng nhập email!";
-    return;
-  }
+    function sendResetEmail() {
+      const email = document.getElementById("resetEmail").value.trim();
+      if (!email) {
+        document.getElementById("message").innerText = "Vui lòng nhập email!";
+        return;
+      }
 
-  firebase.auth().sendPasswordResetEmail(email)
-    .then(() => {
-      document.getElementById("message").innerText = "Một email đặt lại mật khẩu đã được gửi!";
-    })
-    .catch((error) => {
-      document.getElementById("message").innerText = "Lỗi: " + error.message;
-    });
-}
+      firebase.auth().sendPasswordResetEmail(email)
+        .then(() => {
+          document.getElementById("message").innerText = "Một email đặt lại mật khẩu đã được gửi!";
+        })
+        .catch((error) => {
+          document.getElementById("message").innerText = "Lỗi: " + error.message;
+        });
+    }
 
 
   </script>

@@ -12,13 +12,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Poppins:wght@400;500;700&family=Roboto:wght@300;400&family=Open+Sans:wght@400&display=swap"
     rel="stylesheet">
-  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="shortcut icon" href="images/new/logo-removebg-preview.png" />
   <link rel="stylesheet" href="CSS/main.css" />
   <link rel="stylesheet" href="CSS/header.css" />
   <link rel="stylesheet" href="CSS/slider.css" />
   <link rel="stylesheet" href="CSS/blog.css" />
   <link rel="stylesheet" href="CSS/style.css" />
-  <title>| GoodTrip Việt Nam</title>
+  <title>| ECOPATH Việt Nam</title>
   <style>
     /* Áp dụng font cho toàn bộ trang */
     body {
@@ -182,6 +182,13 @@
       border-radius: 0.5rem;
     }
 
+    .news-img video {
+      width: 100%;
+      height: 45rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
     .title-img {
       font-size: 1.2rem;
       color: #666;
@@ -246,6 +253,49 @@
       color: #06aa2a;
       transform: scale(1.01);
     }
+
+    /* Bảng tóm tắt thời gian */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .schedule-table th {
+      background-color: #06aa2a;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .schedule-table td {
+      background-color: #f9f9f9;
+    }
+
+    .schedule-table tr:nth-child(even) td {
+      background-color: #f1f1f1;
+    }
+
+    .schedule-table .location {
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .schedule-table .details {
+      margin: 0;
+      line-height: 1.5;
+    }
   </style>
 </head>
 
@@ -253,14 +303,16 @@
   <!-- Phần tiêu đề bắt đầu -->
   <header id="header">
     <div id="menu-bar" class="fas fa-bars"></div>
-    <a href="#" class="logo"><span>T</span>ravel</a>
+    <a href="#" class="logo" style="width: 8rem;">
+      <img src="images/new/logo-removebg-preview.png" alt="Travel Logo" style="filter: brightness(1.2); width: 95%;">
+    </a>
     <nav class="navbar">
       <a href="home.html">trang chủ</a>
-      <a href="#book">đặt chỗ</a>
-      <a href="#packages">gói du lịch</a>
-      <a href="#travel">xu hướng</a>
-      <a href="#gallery">thư viện</a>
-      <a href="#review">đánh giá</a>
+      <a href="home.html#book">đặt chỗ</a>
+      <a href="home.html#packages">gói du lịch</a>
+      <a href="home.html#travel">xu hướng</a>
+      <a href="home.html#gallery">thư viện</a>
+      <a href="home.html#review">đánh giá</a>
     </nav>
     <div class="icons">
       <!-- <i class="fas fa-search" id="search-btn"></i>
@@ -301,70 +353,112 @@
       <div class="col8">
         <div class="news-content">
           <h2 id="tour">TOUR DU LỊCH AN GIANG 1 NGÀY</h2>
-          <p><strong>Giá:</strong> 1.200.000 VNĐ/1 người lớn (từ 11 tuổi) | 700.000 VNĐ/1 trẻ em (dưới 10 tuổi)</p>
+
+          <div class="news-img">
+            <video playsinline autoplay muted loop>
+              <source src="images/new/6442219073639.mp4" />
+            </video>
+          </div>
+
+          <!-- Bảng tóm tắt thời gian -->
+          <table class="schedule-table" id="scheduleTable">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Hoạt động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5:30 - 7:30</td>
+                <td>
+                  <span class="location">Xuất phát từ Cần Thơ đi An Giang</span>
+                  <p class="details">Khoảng cách: 120km (~2 giờ di chuyển)</p>
+                </td>
+              </tr>
+              <tr>
+                <td>7:30 - 8:30</td>
+                <td>
+                  <span class="location">Ăn sáng tại Long Xuyên</span>
+                  <p class="details">Hủ Tiếu Nam Vang Cô Liên.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>9:00 - 10:30</td>
+                <td>
+                  <span class="location">Tham quan Rừng Tràm Trà Sư</span>
+                  <p class="details">Địa chỉ: Xã Văn Giáo, Huyện Tịnh Biên, An Giang.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>11:00 - 12:00</td>
+                <td>
+                  <span class="location">Viếng Miếu Bà Chúa Xứ Núi Sam</span>
+                  <p class="details">Địa chỉ: P. Núi Sam, TP. Châu Đốc.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>12:30 - 13:30</td>
+                <td>
+                  <span class="location">Ăn trưa tại Châu Đốc</span>
+                  <p class="details">Lẩu Mắm Bà Sáu</p>
+                </td>
+              </tr>
+              <tr>
+                <td>14:00 - 15:30</td>
+                <td>
+                  <span class="location">Check-in Làng Chăm Châu Giang</span>
+                  <p class="details">Địa chỉ: Xã Châu Phong, TX. Tân Châu, An Giang.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>16:00 - 17:00</td>
+                <td>
+                  <span class="location">Trở về Cần Thơ</span>
+                  <p class="details">Kết thúc hành trình.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>Giá:</strong> 800.000 VNĐ/1 người</p>
           <p><strong>Thời gian:</strong> 1 ngày</p>
           <p><strong>Mục tiêu:</strong> Trải nghiệm văn hóa, khám phá thiên nhiên và di tích lịch sử nổi bật tại An Giang.</p>
-          <p><strong>Phương tiện di chuyển:</strong></p>
-          <ul>
-            <li>Xe ô tô hiện đại: Đảm bảo tiện nghi và thân thiện với môi trường.</li>
-            <li>Thuyền địa phương: Tận hưởng cảnh đẹp miền sông nước.</li>
-          </ul>
 
-          <h3 id="lichtrinh">Lịch trình tour</h3>
-          <h4>Buổi sáng:</h4>
-          <p>
-            05:30: Xe đón khách tại điểm hẹn, khởi hành đi An Giang.
-          </p>
-          <p>
-            07:00: Dùng bữa sáng với đặc sản bánh bò thốt nốt và cà phê tại Châu Đốc.
-          </p>
-          <p>
-            08:30: Tham quan <strong>Miếu Bà Chúa Xứ Núi Sam</strong>, nơi linh thiêng và nổi tiếng bậc nhất miền Tây.
-          </p>
-          <p>
-            10:00: Tham quan <strong>Rừng Tràm Trà Sư</strong>:
-          </p>
-          <ul>
-            <li>Khám phá hệ sinh thái độc đáo với thảm thực vật phong phú và nhiều loài chim quý hiếm.</li>
-            <li>Đi thuyền len lỏi qua các con rạch nhỏ, tận hưởng không khí trong lành.</li>
-          </ul>
-          <p>
-            “Rừng Tràm Trà Sư, nằm tại huyện Tịnh Biên, tỉnh An Giang, là khu rừng ngập nước đặc trưng của miền Tây Nam Bộ với diện tích 850 ha. Nơi đây nổi bật với hệ sinh thái phong phú, bao gồm hơn 140 loài thực vật, 70 loài chim quý hiếm như cò lạo Ấn Độ và điên điển phương Đông, cùng nhiều loài động vật khác. Với cảnh quan thiên nhiên hoang sơ, những con kênh chằng chịt và hàng tràm xanh mướt, rừng tràm mang đến không gian yên bình và không khí trong lành. Đặc biệt vào mùa nước nổi (từ tháng 9 đến tháng 11), khu rừng trở thành điểm đến lý tưởng để thư giãn, khám phá thiên nhiên và chiêm ngưỡng vẻ đẹp độc đáo của vùng đất này.”
-          </p>
-          <div class="news-img">
-            <img src="images/new/z6419622114015_2446d8aeabde2407d2254ce1967df324.jpg" alt="Rừng Tràm Trà Sư" />
-            <div class="title-img">Rừng Tràm Trà Sư - Hệ sinh thái phong phú (nguồn sưu tầm)</div>
+          <h3 id="lichtrinh">Lịch Trình Du Lịch 1 Ngày Từ Cần Thơ Đi An Giang – Eco Path</h3>
+          <div id="scheduleDetails">
+            <h4>5:30 - 7:30 | Xuất phát từ Cần Thơ đi An Giang</h4>
+            <p>Khoảng cách: 120km (~2 giờ di chuyển).</p>
+
+            <h4>7:30 - 8:30 | Ăn sáng tại Long Xuyên</h4>
+            <p>Hủ Tiếu Nam Vang Cô Liên (Địa chỉ: 28 Lý Tự Trọng, TP. Long Xuyên).</p>
+
+            <h4>9:00 - 10:30 | Tham quan Rừng Tràm Trà Sư</h4>
+            <p>Địa chỉ: Xã Văn Giáo, Huyện Tịnh Biên, An Giang.</p>
+            <p>“Rừng Tràm Trà Sư, nằm tại huyện Tịnh Biên, tỉnh An Giang, là khu rừng ngập nước đặc trưng của miền Tây Nam Bộ với diện tích 850 ha. Nơi đây nổi bật với hệ sinh thái phong phú, bao gồm hơn 140 loài thực vật, 70 loài chim quý hiếm như cò lạo Ấn Độ và điên điển phương Đông, cùng nhiều loài động vật khác. Với cảnh quan thiên nhiên hoang sơ, những con kênh chằng chịt và hàng tràm xanh mướt, rừng tràm mang đến không gian yên bình và không khí trong lành. Đặc biệt vào mùa nước nổi (từ tháng 9 đến tháng 11), khu rừng trở thành điểm đến lý tưởng để thư giãn, khám phá thiên nhiên và chiêm ngưỡng vẻ đẹp độc đáo của vùng đất này.”</p>
+            <div class="news-img">
+              <img src="images/new/z6419622114015_2446d8aeabde2407d2254ce1967df324.jpg" alt="Rừng Tràm Trà Sư" />
+              <div class="title-img">Rừng Tràm Trà Sư - Hệ sinh thái phong phú (nguồn sưu tầm)</div>
+            </div>
+
+            <h4>11:00 - 12:00 | Viếng Miếu Bà Chúa Xứ Núi Sam</h4>
+            <p>Địa chỉ: P. Núi Sam, TP. Châu Đốc.</p>
+            <p>Miếu Bà Chúa Xứ Núi Sam là một địa điểm linh thiêng và nổi tiếng bậc nhất miền Tây, thu hút hàng triệu du khách mỗi năm.</p>
+
+            <h4>12:30 - 13:30 | Ăn trưa tại Châu Đốc</h4>
+            <p>Lẩu Mắm Bà Sáu (Địa chỉ: 45 Lê Lợi, Châu Đốc) – Đặc sản lẩu mắm cá linh, bông điên điển.</p>
+
+            <h4>14:00 - 15:30 | Check-in Làng Chăm Châu Giang</h4>
+            <p>Địa chỉ: Xã Châu Phong, TX. Tân Châu, An Giang.</p>
+            <p>Làng Chăm Châu Giang là nơi sinh sống của cộng đồng người Chăm theo đạo Hồi. Nơi đây nổi bật với kiến trúc nhà sàn truyền thống, các thánh đường Hồi giáo uy nghi, cùng nghề dệt thổ cẩm tinh xảo. Người Chăm tại đây vẫn giữ gìn bản sắc văn hóa và phong tục tập quán độc đáo, từ trang phục truyền thống đến ẩm thực đặc trưng.</p>
+            <div class="news-img">
+              <img src="images/new/z6419622104458_4aea6bcf111b3729edd130e51294ae7c.jpg" alt="Làng Chăm Châu Giang" />
+              <div class="title-img">Làng Chăm Châu Giang - Văn hóa đặc sắc (nguồn sưu tầm)</div>
+            </div>
+
+            <h4>18:00 - 20:30 | Trở về Cần Thơ</h4>
+            <p>Kết thúc hành trình.</p>
           </div>
-
-          <h4>Buổi trưa:</h4>
-          <p>
-            12:00: Dùng cơm trưa với các món đặc sản miền Tây như: lẩu cá linh bông điên điển, gỏi sầu đâu, và cá rô kho tộ.
-          </p>
-          <p>
-            Nghỉ ngơi, thư giãn trong không gian mát mẻ, yên bình.
-          </p>
-
-          <h4>Buổi chiều:</h4>
-          <p>
-            13:30: Tiếp tục hành trình đến <strong>Làng Chăm Đa Phước</strong>:
-          </p>
-          <ul>
-            <li>Tìm hiểu văn hóa, phong tục tập quán của cộng đồng Chăm Islam.</li>
-            <li>Thưởng thức các sản phẩm dệt thủ công truyền thống.</li>
-          </ul>
-          <p>
-            Làng Chăm ở An Giang, đặc biệt là Làng Chăm Đa Phước và Châu Giang, là nơi sinh sống của cộng đồng người Chăm theo đạo Hồi. Những ngôi làng này nổi bật với kiến trúc nhà sàn truyền thống, các thánh đường Hồi giáo uy nghi như Masjid Al Ehsan và Mubarak, cùng nghề dệt thổ cẩm tinh xảo. Người Chăm tại đây vẫn giữ gìn bản sắc văn hóa và phong tục tập quán độc đáo, từ trang phục truyền thống đến ẩm thực đặc trưng. Đây là điểm đến lý tưởng để khám phá sự giao thoa văn hóa và trải nghiệm không gian yên bình giữa miền sông nước.
-          </p>
-          <div class="news-img">
-            <img src="images/new/z6419622104458_4aea6bcf111b3729edd130e51294ae7c.jpg" alt="Làng Chăm Đa Phước" />
-            <div class="title-img">Làng Chăm Đa Phước - Văn hóa đặc sắc (nguồn sưu tầm)</div>
-          </div>
-          <p>
-            15:00: Tham quan <strong>Chợ Tịnh Biên</strong>, mua sắm đặc sản địa phương như mắm Châu Đốc, đường thốt nốt, và các loại khô.
-          </p>
-          <p>
-            16:30: Khởi hành về lại Cần Thơ, kết thúc chuyến đi.
-          </p>
 
           <h3 id="hoatdong">Các hoạt động nổi bật trong tour:</h3>
           <ul>

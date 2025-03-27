@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,110 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="icon/themify-icons/themify-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Poppins:wght@400;500;700&family=Roboto:wght@300;400&family=Open+Sans:wght@400&display=swap"
     rel="stylesheet">
-  <link rel="shortcut icon" href="images/GoodTrip5.png" />
+  <link rel="shortcut icon" href="images/new/logo-removebg-preview.png" />
   <link rel="stylesheet" href="CSS/main.css" />
   <link rel="stylesheet" href="CSS/header.css" />
   <link rel="stylesheet" href="CSS/slider.css" />
-
   <link rel="stylesheet" href="CSS/blog.css" />
   <link rel="stylesheet" href="CSS/style.css" />
-  <title>| GoodTrip Việt Nam</title>
+  <title>| ECOPATH Việt Nam</title>
   <style>
-    /* Áp dụng font cho toàn bộ trang */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      /* Font mặc định cho nội dung chính */
-      /* Màu nền đen như trong ảnh */
-      color: #fff;
-      /* Màu chữ trắng */
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Tiêu đề chính (h1) - giống "LANDING PAGE", "HIKINGZ" */
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      /* ExtraBold/Black */
-      font-size: 4rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-
-    }
-
-    /* Tiêu đề phụ (h2) - giống "CHOOSE YOUR DESTINATION", "EXPLORE THE NATURE" */
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      /* Bold */
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      color: black;
-    }
-
-    /* Nội dung văn bản (p, đoạn văn) - giống "Every step is a step toward greater peace" */
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      /* Light */
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #ccc;
-      /* Màu xám nhạt cho văn bản phụ */
-    }
-
-    /* Nút bấm (CTA) - giống "Book Now", "Learn More" */
-    button,
-    .btn {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      /* Medium */
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      background-color: #ffd700;
-      border: none;
-      color: #1a1a1a;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover,
-    .btn:hover {
-      background-color: #e6c200;
-    }
-
-    /* Đảm bảo các thẻ khác (h3, h4, v.v.) cũng có font phù hợp */
-    h3 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.8rem;
-      color: #fff;
-    }
-
-    a {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      color: #ffd700;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #e6c200;
-    }
-
-
-
-    /* Thêm hiệu ứng cuộn mượt mà */
+    /* CSS giữ nguyên như bản gốc */
     html {
       scroll-behavior: smooth;
     }
 
-    /* Điều chỉnh bố cục và kích thước chữ */
     .news-col {
       display: flex;
       max-width: 114rem;
@@ -202,23 +112,6 @@
       margin-top: 0.5rem;
     }
 
-    .care {
-      display: flex;
-      justify-content: flex-start;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      font-size: 1.4rem;
-      color: #666;
-    }
-
-    .care i {
-      cursor: pointer;
-    }
-
-    .care i:hover {
-      color: #06aa2a;
-    }
-
     .sidenav {
       position: sticky;
       top: 7rem;
@@ -233,8 +126,6 @@
       font-size: 2.5rem;
       margin-block-start: 1rem;
       margin-block-end: 1rem;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
       line-height: 1.5;
       color: #06aa2a;
     }
@@ -259,6 +150,150 @@
       color: #06aa2a;
       transform: scale(1.01);
     }
+
+    .sidenav .book-tour-btn {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .news-img video {
+      width: 100%;
+      height: 45rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #06aa2a;
+    }
+
+    .popup-content label {
+      font-size: 1.4rem;
+      color: #333;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-content input,
+    .popup-content textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.3rem;
+      font-size: 1.4rem;
+    }
+
+    .popup-content textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    .popup-content .total-price {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #06aa2a;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .popup-content .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .popup-content .calculate-btn,
+    .popup-content .confirm-btn {
+      background-color: #06aa2a;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+
+    .popup-content .calculate-btn:hover,
+    .popup-content .confirm-btn:hover {
+      background-color: #059124;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .schedule-table th {
+      background-color: #06aa2a;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .schedule-table td {
+      background-color: #f9f9f9;
+    }
+
+    .schedule-table tr:nth-child(even) td {
+      background-color: #f1f1f1;
+    }
+
+    .schedule-table .location {
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .schedule-table .details {
+      margin: 0;
+      line-height: 1.5;
+    }
   </style>
 </head>
 
@@ -266,36 +301,30 @@
   <!-- Phần tiêu đề bắt đầu -->
   <header id="header">
     <div id="menu-bar" class="fas fa-bars"></div>
-    <a href="#" class="logo"><span>T</span>ravel</a>
+    <a href="#" class="logo" style="width: 8rem;">
+      <img src="images/new/logo-removebg-preview.png" alt="Travel Logo" style="filter: brightness(1.2); width: 95%;">
+    </a>
     <nav class="navbar">
       <a href="home.html">trang chủ</a>
-      <a href="#book">đặt chỗ</a>
-      <a href="#packages">gói du lịch</a>
-      <a href="#travel">xu hướng</a>
-      <a href="#gallery">thư viện</a>
-      <a href="#review">đánh giá</a>
+      <a href="home.html#book">đặt chỗ</a>
+      <a href="home.html#packages">gói du lịch</a>
+      <a href="home.html#travel">xu hướng</a>
+      <a href="home.html#gallery">thư viện</a>
+      <a href="home.html#review">đánh giá</a>
     </nav>
     <div class="icons">
-      <!-- <i class="fas fa-search" id="search-btn"></i>
-        <i class="fas fa-user" id="login-btn"></i> -->
     </div>
-    <!-- Phần người dùng -->
     <div class="user-section">
-      <i class="fas fa-user" id="login-btn"></i>
+      <i class="fas fa STC-user" id="login-btn"></i>
     </div>
     <div class="login-btn">
       <a href="UILogin.html">Đăng nhập</a>
     </div>
-    <!-- <form action="" class="search-bar-container">
-        <input type="search" id="search-bar" placeholder="tìm kiếm tại đây...">
-        <label for="search-bar" class="fas fa-search"></label>
-    </form> -->
   </header>
-
   <!-- Phần tiêu đề kết thúc -->
 
   <!-- CONTAINER -->
-  <div id="timhieucantho"></div>
+  <div id="timhieusocctrang"></div>
   <div id="newscontainer">
     <div class="header">
       <div class="introduct">
@@ -303,12 +332,12 @@
           <div class="content center">
             <h5 class="t-black">ĐI KHẮP VIỆT NAM</h5>
             <h5 class="t-black bot-content">
-              KHÁM PHÁ VẺ ĐẸP MIỀN SÔNG NƯỚC CÙNG GOODTRIP
+              KHÁM PHÁ VẺ ĐẸP MIỀN SÔNG NƯỚC CÙNG ECOPATH
             </h5>
             <span class="line gold"></span>
             <h2 class="t-content" style="font-size: 700 !important; font-size: 50px;">
-              TOUR CẦN THƠ – SÓC TRĂNG
-              <span class="t-gold">2 NGÀY 1 ĐÊM</span>
+              TOUR SÓC TRĂNG
+              <span class="t-gold">1 NGÀY</span>
             </h2>
           </div>
         </div>
@@ -316,38 +345,73 @@
     </div>
     <div class="news-col">
       <div class="col8">
-
         <div class="news-content">
-          <h2 id="tour">TOUR CẦN THƠ – SÓC TRĂNG 2 NGÀY 1 ĐÊM</h2>
-          <p><strong>Khởi hành:</strong> Theo yêu cầu</p>
-          <p><strong>Phương tiện:</strong> Xe du lịch</p>
+          <h2 id="tour">TOUR SÓC TRĂNG 1 NGÀY</h2>
+          <div class="news-img">
+            <video playsinline autoplay muted loop>
+              <source src="images/new/6442219073639.mp4" />
+            </video>
+          </div>
 
-          <h3 id="ngay1">Ngày 1: CẦN THƠ – SÓC TRĂNG (Ăn sáng, trưa, tối)</h3>
+          <!-- Bảng tóm tắt thời gian -->
+          <table class="schedule-table" id="scheduleTable">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Hoạt động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07:00 - 09:30</td>
+                <td>
+                  <span class="location">Tần Huê Viên & Chùa Chén Kiểu</span>
+                  <p class="details">Tham quan Tần Huê Viên - nơi sản xuất bánh pía lớn nhất Việt Nam, và Chùa Chén Kiểu với kiến trúc độc đáo.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>09:30 - 11:30</td>
+                <td>
+                  <span class="location">Bảo tàng Khmer</span>
+                  <p class="details">Tham quan Bảo tàng Khmer, tìm hiểu về văn hóa dân tộc Khmer.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>11:30 - 13:30</td>
+                <td>
+                  <span class="location">Sóc Trăng - Nhà hàng Hằng Ký</span>
+                  <p class="details">Ăn trưa tại nhà hàng Hằng Ký, nghỉ ngơi.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>13:30 - 15:00</td>
+                <td>
+                  <span class="location">KDL Chợ Nổi Ngã Năm</span>
+                  <p class="details">Tham quan chợ nổi nổi tiếng, trải nghiệm đi ghe/thuyền, khám phá đặc sản địa phương.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>15:00 - 16:30</td>
+                <td>
+                  <span class="location">Vườn Cò Tân Long</span>
+                  <p class="details">Khám phá khu bảo tồn thiên nhiên với hàng ngàn loài cò, vạc sinh sống.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>16:30 - 18:00</td>
+                <td>
+                  <span class="location">Cồn Mỹ Phước & Mua sắm đặc sản</span>
+                  <p class="details">Tham quan Cồn Mỹ Phước – “viên ngọc xanh” trên sông Hậu, sau đó mua sắm đặc sản như bánh pía, lạp xưởng, kẹo dừa.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 id="ngay1">Ngày 1: KHÁM PHÁ SÓC TRĂNG</h3>
           <h4>Buổi sáng:</h4>
-          <p>
-            05:00: Đón khách tại điểm hẹn ở Cần Thơ, khởi hành tham quan <strong>Chợ Nổi Cái Răng</strong> – chợ nổi lớn
-            nhất miền Tây, thưởng thức cà phê trên sông.
-          </p>
-          <div class="news-img">
-            <img src="images/new/z6419363771178_1cbfd2bf0b7f0edd34c452d85205809f.jpg" alt="Chợ Nổi Cái Răng" />
-            <div class="title-img">Chợ Nổi Cái Răng tấp nập (nguồn sưu tầm)</div>
-          </div>
-          <div class="news-img">
-            <img src="images/new/z6419363771164_11b0192fbefc0d280473f47ceadd866a.jpg" alt="Chợ Nổi Cái Răng" />
-            <div class="title-img">Chợ Nổi Cái Răng tấp nập (nguồn sưu tầm)</div>
-          </div>
-          <div class="news-img">
-            <img src="images/new/z6419363715083_0479eaf8d886015f6115658f39a55765.jpg" alt="Chợ Nổi Cái Răng" />
-            <div class="title-img">Chợ Nổi Cái Răng tấp nập (nguồn sưu tầm)</div>
-          </div>
-          <p>
-            07:00: Dùng điểm tâm sáng tại nhà hàng ven sông.
-          </p>
-          <p>
-            09:30: Khởi hành đi Sóc Trăng, trên đường ghé tham quan:
-          </p>
+          <p>07:00: Đón khách tại điểm hẹn ở Sóc Trăng, khởi hành tham quan:</p>
           <ul>
-            <li><strong>Tần Huê Viên</strong> - địa điểm du lịch và là nơi sản xuất bánh pía lớn nhất Việt Nam</li>
+            <li><strong>Tần Huê Viên</strong> - địa điểm du lịch và là nơi sản xuất bánh pía lớn nhất Việt Nam.</li>
             <li><strong>Chùa Chén Kiểu</strong> – có kiến trúc độc đáo từ các mảnh chén sứ.</li>
           </ul>
           <div class="news-img">
@@ -358,72 +422,38 @@
             <img src="images/new/z6419363561593_cb463e63260d549fbc9154ec7cf56828.jpg" alt="Chùa Chén Kiểu" />
             <div class="title-img">Chùa Chén Kiểu với kiến trúc độc đáo (nguồn sưu tầm)</div>
           </div>
-
-          <h4>Buổi trưa:</h4>
-          <p>
-            12:00: Ăn trưa tại nhà hàng Hằng Ký và về khách sạn nghỉ ngơi.
-          </p>
-
-          <h4>Buổi chiều:</h4>
-          <p>
-            14:00: Tiếp tục tham quan <strong>Bảo tàng Khmer</strong> để tìm hiểu về văn hóa dân tộc Khmer.
-          </p>
+          <p>09:30: Tham quan <strong>Bảo tàng Khmer</strong> để tìm hiểu về văn hóa dân tộc Khmer.</p>
           <div class="news-img">
             <img src="images/new/z6419363513895_419d9bcf1b6e13282947c1ce24827412.jpg" alt="Bảo tàng Khmer" />
             <div class="title-img">Bảo tàng Khmer - Văn hóa đặc sắc (nguồn sưu tầm)</div>
           </div>
-          <p>
-            15:30: Nhận phòng khách sạn 3 sao tại trung tâm thành phố Sóc Trăng. Nghỉ ngơi.
-          </p>
-          <p>
-            17:00: Dạo quanh thành phố, chụp ảnh tại quảng trường, tự do thưởng thức ẩm thực địa phương.
-          </p>
-
-          <h4>Buổi tối:</h4>
-          <p>
-            19:00: Dùng bữa tối với các món ăn của miền Tây.
-          </p>
-          <p>
-            20:00: Về khách sạn, tự do khám phá Sóc Trăng về đêm.
-          </p>
-
-          <h3 id="ngay2">Ngày 2: SÓC TRĂNG – CẦN THƠ (Ăn sáng, trưa)</h3>
-          <h4>Buổi sáng:</h4>
-          <p>
-            06:30: Dùng bữa sáng tại khách sạn.
-          </p>
-          <p>
-            07:30: Khởi hành tham quan <strong>Cồn Mỹ Phước</strong> – được mệnh danh là “viên ngọc xanh” trên sông Hậu.
-          </p>
-          <p>
-            09:30: Mua sắm đặc sản như bánh pía, lạp xưởng, kẹo dừa…
-          </p>
-          <p>
-            10:30: Lên xe về lại Cần Thơ.
-          </p>
 
           <h4>Buổi trưa:</h4>
-          <p>
-            12:00: Dùng cơm trưa tại nhà hàng ven sông ở Cần Thơ.
-          </p>
-          <p>
-            13:30: Ghé <strong>Thiền viện Trúc Lâm Phương Nam</strong> – ngôi chùa lớn nhất miền Tây.
-          </p>
+          <p>11:30: Ăn trưa tại nhà hàng Hằng Ký và nghỉ ngơi.</p>
+
+          <h4>Buổi chiều:</h4>
+          <p>13:30: Khởi hành tham quan <strong>KDL Chợ Nổi Ngã Năm</strong> – một trong những chợ nổi nổi tiếng của miền Tây. Trải nghiệm đi ghe/thuyền, khám phá hoạt động buôn bán nông sản và đặc sản địa phương (Giá vé: 50.000 - 100.000 VNĐ/người).</p>
           <div class="news-img">
-            <img src="images/canthoimg/cantho17.jpg" alt="Thiền viện Trúc Lâm Phương Nam" />
-            <div class="title-img">Thiền viện Trúc Lâm Phương Nam từ trên cao (nguồn sưu tầm)</div>
+            <img src="images/new/cho-noi-nga-nam.jpg" alt="Chợ Nổi Ngã Năm" />
+            <div class="title-img">Chợ Nổi Ngã Năm - Nét đặc trưng miền Tây (nguồn sưu tầm)</div>
           </div>
-          <p>
-            15:00: Đưa khách về điểm đón ban đầu, kết thúc tour.
-          </p>
+
+          <p>15:00: Tiếp tục đến <strong>Vườn Cò Tân Long</strong> – khu bảo tồn thiên nhiên với hàng ngàn loài cò, vạc sinh sống. Thưởng thức vẻ đẹp thiên nhiên hoang sơ (Giá vé: 50.000 VNĐ/người).</p>
+          <div class="news-img">
+            <img src="images/new/vuon-co-tan-long.jpg" alt="Vườn Cò Tân Long" />
+            <div class="title-img">Vườn Cò Tân Long - Khu bảo tồn thiên nhiên (nguồn sưu tầm)</div>
+          </div>
+
+          <p>16:30: Tham quan <strong>Cồn Mỹ Phước</strong> – được mệnh danh là “viên ngọc xanh” trên sông Hậu, sau đó mua sắm đặc sản như bánh pía, lạp xưởng, kẹo dừa.</p>
+
+          <p>18:00: Đưa khách về điểm đón ban đầu, kết thúc tour.</p>
 
           <h3 id="dichvu">Dịch vụ bao gồm:</h3>
           <ul>
-            <li>Xe du lịch đời mới, thuyền tham quan chợ nổi.</li>
-            <li>Khách sạn 3 sao tiện nghi.</li>
-            <li>Các bữa ăn theo chương trình.</li>
+            <li>Xe du lịch đời mới.</li>
+            <li>Bữa trưa tại nhà hàng.</li>
             <li>Hướng dẫn viên chuyên nghiệp.</li>
-            <li>Vé tham quan các điểm du lịch.</li>
+            <li>Vé tham quan các điểm du lịch (bao gồm vé ghe/thuyền tại Chợ Nổi Ngã Năm và vé vào Vườn Cò Tân Long).</li>
           </ul>
         </div>
       </div>
@@ -432,22 +462,103 @@
           <h3 class="header-sidenav">Nội dung chính</h3>
           <ul class="newslist" style="list-style-type: none">
             <li>
-              <a href="#tour">TOUR CẦN THƠ – SÓC TRĂNG 2 NGÀY 1 ĐÊM</a>
+              <a href="#tour">TOUR SÓC TRĂNG 1 NGÀY</a>
             </li>
             <li>
-              <a href="#ngay1">Ngày 1: Cần Thơ – Sóc Trăng</a>
-            </li>
-            <li>
-              <a href="#ngay2">Ngày 2: Sóc Trăng – Cần Thơ</a>
+              <a href="#ngay1">Ngày 1: Khám phá Sóc Trăng</a>
             </li>
             <li>
               <a href="#dichvu">Dịch vụ bao gồm</a>
             </li>
           </ul>
+          <div class="book-tour-btn">
+            <button class="btn" onclick="openPopup()">XÁC NHẬN ĐẶT TOUR</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Popup đặt tour -->
+  <div class="popup" id="bookingPopup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h3>Đặt Tour Sóc Trăng 1 Ngày</h3>
+      <form id="bookingForm">
+        <label for="tourDate">Chọn ngày khởi hành:</label>
+        <input type="date" id="tourDate" required>
+
+        <label for="adults">Số người lớn (từ 11 tuổi):</label>
+        <input type="number" id="adults" min="0" value="0" required>
+
+        <label for="children">Số trẻ em (dưới 10 tuổi):</label>
+        <input type="number" id="children" min="0" value="0" required>
+
+        <button type="button" class="calculate-btn" onclick="calculateTotal()">Tính tổng tiền</button>
+        <button type="button" class="confirm-btn" onclick="confirmBooking()" style="display: none;" id="confirmBtn">Xác nhận đặt</button>
+        <p class="total-price" id="totalPrice"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Mở popup đặt tour
+    function openPopup() {
+      document.getElementById('bookingPopup').style.display = 'flex';
+    }
+
+    // Đóng popup đặt tour
+    function closePopup() {
+      document.getElementById('bookingPopup').style.display = 'none';
+      document.getElementById('totalPrice').style.display = 'none';
+      document.getElementById('confirmBtn').style.display = 'none';
+      document.getElementById('bookingForm').reset();
+    }
+
+    // Tính tổng tiền
+    function calculateTotal() {
+      const adultPrice = 900000; // Giá tăng do thêm địa điểm
+      const childPrice = 600000; // Giá tăng do thêm địa điểm
+      const discountThreshold = 4;
+      const discountRate = 0.1;
+
+      const adults = parseInt(document.getElementById('adults').value) || 0;
+      const children = parseInt(document.getElementById('children').value) || 0;
+      const totalPeople = adults + children;
+
+      if (totalPeople === 0) {
+        alert('Vui lòng nhập số lượng người tham gia!');
+        return;
+      }
+
+      let total = adults * adultPrice + children * childPrice;
+
+      if (totalPeople >= discountThreshold) {
+        total = total * (1 - discountRate);
+      }
+
+      const totalPriceElement = document.getElementById('totalPrice');
+      totalPriceElement.textContent = `Tổng tiền: ${total.toLocaleString('vi-VN')} VNĐ`;
+      totalPriceElement.style.display = 'block';
+
+      document.getElementById('confirmBtn').style.display = 'inline-block';
+    }
+
+    // Xác nhận đặt tour
+    function confirmBooking() {
+      const tourDate = document.getElementById('tourDate').value;
+      const adults = document.getElementById('adults').value;
+      const children = document.getElementById('children').value;
+
+      if (!tourDate) {
+        alert('Vui lòng chọn ngày khởi hành!');
+        return;
+      }
+
+      alert(`Đặt tour thành công!\nNgày khởi hành: ${tourDate}\nSố người lớn: ${adults}\nSố trẻ em: ${children}`);
+      closePopup();
+    }
+  </script>
 </body>
 
 </html>
